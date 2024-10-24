@@ -1,0 +1,386 @@
+.megamenu
+    left: 0
+    top: 100%
+    @extend %absolute
+    ul
+        padding-left: 0
+        margin: 0
+    a
+        &.link-arrow
+            color: $info-default
+            margin-top: 4px
+            align-self: flex-start
+            &::after
+                +angle(down, 5px, 5px, 1px, $info-default)
+    .bg-gray
+        background: transparent
+    .arrow
+        @extend %absolute
+        top: 0
+        left: 17%
+        +fullhd
+            top: -16px
+        .triangle
+            &:after
+                +fullhd
+                    width: 22px
+                    height: 16px
+            &:before
+                +fullhd
+                    height: 20px
+                    width: 20px
+                    bottom: -27px
+    .tab-pane
+        animation: fade 1.4s
+        max-width: 297px
+    .nav
+        &-link  
+            .arrow
+                display: none
+                top: 0
+            &.active
+                .arrow
+                    left: auto
+                    right: -22px
+                    +transform(rotate(-90deg))
+                    display: block
+                    .triangle
+                        &:before
+                            height: 11px
+                            width: 11px
+                            left: -10px
+                            background-color: $white-color
+                            bottom: -5px
+                            +fullhd
+                                height: 14px
+                                width: 14px
+                                left: -14px
+                                bottom: -7px
+    &__wrapper
+        @extend %overflow
+        @extend .bg-white
+        border: 1px solid #E6E4EB
+        +border-radius(0 0 10px 10px)
+        +box-shadow(0px 18px 40px rgba(67, 64, 98, 0.1))
+        .row
+            flex-wrap: nowrap
+            .col-auto
+                max-width: 59.1%
+                flex: 0 0 59.1%
+    &__label
+        @extend .text-10
+        color: $text-700
+        @extend %medium
+        line-height: 1
+        margin-bottom: 12px
+        display: block
+        +desktop-mini
+            margin-bottom: 15px
+    &__heading
+        @extend .i-block
+        +desktop-mini
+            padding: 1.375rem 1.5rem
+            background-color: $info-50
+            min-height: 120px
+        +laptop
+            min-height: 112px
+        .img-wrap
+            &.icon
+                margin-right: 10px
+                +desktop-mini
+                    min-width: 3.125rem
+                    min-height: 3.125rem
+                    +border-radius(1rem)
+                    background-color: $info-100
+                    .menu-cloud &
+                        background-color: $warning-100
+                +laptop 
+                    margin: 0
+            img
+                height: 21px
+                width: 21px
+                min-width: 21px
+            +laptop
+                order: 2
+        .text-wrap
+            p
+                color: $text-500
+                margin-bottom: 0
+                line-height: 1.25
+    &__title
+        margin-bottom: 20px
+        line-height: 0.8
+        @extend .text-700
+        @extend .text-8
+        @extend %body-font
+        @extend %regular
+        +desktop-max
+            font-size: 1rem
+            margin-bottom: 8px
+    &__description
+        @extend .text-12
+        color: $text-default
+        line-height: 22px
+    &--sm
+        width: 40vw
+        +laptop
+            width: 36vw
+        +fullhd
+            max-width: 507px
+    &__left,
+    &__right
+        height: 100%
+        padding: 20px
+    &__right
+        background-color: $info-50
+        +laptop
+            padding: 30px 20px
+    &__left
+        +laptop
+            padding: 30px
+    &__body
+        padding: 20px
+        height: calc(100% - 230px)
+        @extend %display-flex
+        +flex-direction(column)
+        +laptop
+            padding: 1.3125rem 1.5rem
+            height: calc(100% - 197px)
+        .menu-cloud &
+            border: none !important
+    &__action
+        padding: 1.5rem
+        +laptop
+            padding: 1.5rem
+        .btn
+            height: 2.5rem
+    &--products
+        .arrow
+            left: 20%
+            +laptop
+                left: 28%
+            +fullhd
+                left: 26%
+        [class*="col-"]
+            &:first-of-type
+                width: 33.33%
+                +fullhd
+                    max-width: 416px
+                a.link-arrow
+                    margin-left: 0
+
+
+            &:nth-of-type(2)
+                border-left: 1px solid $text-100
+                border-right: 1px solid $text-100
+
+        .megamenu
+            &__body
+                border-bottom: 1px solid $text-100
+                padding-bottom: 2.625rem
+                .list-wrapper
+                    @extend %display-flex
+                    +justify-content(space-between)
+                .icon-list
+                    width: 50%
+                    &:nth-of-type(2)
+                        +fullhd
+                            max-width: 177px
+                a
+                    &.link-arrow
+                        margin-top: auto
+                .block-list
+                    margin-bottom: 26px
+    &--solutions
+        width: 529px
+        .row
+            .col-auto
+                max-width: 56.46%
+                flex: 0 0 56.46%
+        .megamenu
+            &__left
+                padding: 30px 21px
+                .icon-list
+                    li:nth-of-type(5)
+                            .icon-xs
+                                height: 16px        
+            &__right
+                .tab-pane
+                    &:nth-of-type(3),
+                    &:nth-of-type(5),
+                    &:nth-of-type(7)
+                        figure
+                            position: relative
+                            top: 10%
+            &__img
+                background-color:  #E5E5E6
+                +border-radius(5px)
+                height: 119px
+                @extend %display-flex
+                +justify-content(center)
+                +align-items(center)
+            &__description
+                margin: 10px 0
+    &--resources
+        .mm-resources-slider
+            +fullhd
+                width: 270px
+            .slider-item
+                figure
+                    margin-bottom: 0
+                .text-11
+                    @extend %medium
+                    line-height: 1.7
+                    color: $gray-default
+                    margin: 12px 0 0
+            &.slick
+                &-dotted
+                    &.slick-slider
+                        margin-bottom: 0
+            .slick
+                &-dots
+                    height: 6px
+                    bottom: -10px
+                    position: relative
+                    li
+                        button
+                            height: 6px
+                            width: 6px
+    &--company
+        .nav-brand
+            height: 38px
+            max-width: 120px
+        .megamenu
+            &__label
+                margin-bottom: 20px
+            &__description
+                margin: 8px 0 12px
+    &--products,
+    &--resources,
+    &--company,
+    &--solutions
+        display: none
+.nl-main
+    &:not(:first-of-type)
+        @extend %relative
+        .megamenu
+            left: -30%
+    &:nth-of-type(4),
+    &:last-of-type
+        .megamenu
+            left: -29%
+            +laptop
+                left: -12%
+            .arrow
+                left: 19%
+                +laptop
+                    left: 12%
+            .nav-link
+                &.active
+                    .arrow
+                        left: auto
+                        right: -20px
+                        +laptop
+                            right: -30px
+.block-list
+    &__item
+        @extend %display-flex
+        @extend %relative
+        &:not(:last-of-type)
+            margin-bottom: 25px
+        .img-wrap
+            height: 28px
+            min-width: 28px !important
+            margin-right: 20px
+            margin-bottom: 0
+            +desktop-max
+                margin-right: 18px
+        .text-wrap
+            span
+                display: block
+                &:first-of-type
+                    @extend .text-11
+                    color: $text-700
+                    margin-bottom: 5px
+                    line-height: 1.43
+                &:nth-of-type(2)
+                    @extend .text-12
+                    color: rgba($text-700, 0.8)
+.icon-list
+    &.nav-pills
+        .megamenu &
+            +flex-direction(column)
+        .nav-link
+            .megamenu &
+                background-color: transparent
+                padding: 0
+                color: $text-default
+                font-size: 0.875rem
+                line-height: 1
+                @extend %body-font
+                @extend %regular
+                @extend %relative
+                +justify-content(flex-start)
+            &.active, &:hover
+                .megamenu &
+                    @extend .text-md
+    li
+        line-height: 0.65
+        &:not(:last-of-type)
+            margin-bottom: 12px
+            +desktop-mini
+                margin-bottom: 18px
+            .megamenu--products &
+                margin-bottom: 1rem
+        a
+            color: $text-700
+            line-height: 1
+            @extend .text-12
+            @extend %display-flex
+            +align-items(flex-start)
+            .megamenu--products &
+                line-height: 1.43
+            &:hover
+                color: $primary-600
+                    
+            span
+                display: inline-block
+                margin-right: 9px
+                .dropdown-menu--colapse &
+                    margin-right: 0.5rem
+                    min-width: 14px
+                    width: 14px 
+                    background-size: 14px 16px
+                    +desktop-mini
+                        margin-right: 0.75rem
+                .megamenu--products &
+                    width: 19px 
+                    min-width: 19px 
+                    margin-right: 8px
+                    text-align: center
+                    +fullhd
+                        margin-right: 12px
+                .megamenu--solutions &
+                    max-width: 14px
+
+.products-link:hover
+    .megamenu--products
+        +desktop-mini
+            display: block
+.solutions-link:hover
+    .megamenu--solutions
+        +desktop-mini
+            display: block
+.resources-link:hover
+    .megamenu--resources
+        +desktop-mini
+            display: block
+.company-link:hover
+    .megamenu--company
+        +desktop-mini
+            display: block
+
+//background color
+.menu
+    &-cloud
+        background-color: $warning-50

@@ -1,0 +1,78 @@
+.modal
+    &-dialog
+        max-width: 570px
+        +mobile
+            margin: .5rem auto
+        +mobile-sm-max
+            margin: .5rem
+    &-content
+        border: 1px solid #CAD5E0
+        +border-radius(10px)
+    &-header
+        border: none
+        padding: 30px 30px 0
+        +tablet
+            padding: 50px 50px 0
+        &.centered
+            +justify-content(center)
+        button
+            position: absolute
+            top: 20px
+            right: 20px
+    &-title
+        font-family: Heebo
+        margin-bottom: 8px
+
+    &-body
+        // padding: 50px
+        .form-group
+            margin-bottom: 18px
+            label
+                margin-bottom: 12px
+                font-size: 1rem
+                color: $gray-700
+                font-family: Heebo
+            input
+                background: $primary-50
+                border: 1px solid rgba(57, 1, 121, 0.1)
+                +border-radius(10px)
+
+    &-footer
+        border: none
+        padding: 0 30px 30px
+        +tablet
+            padding: 0 50px 50px
+        .btn
+            margin: 0
+    &-response
+        display: none
+
+    &--small
+        .modal
+            &-dialog
+                max-width: 500px
+            &-body
+                padding: 6px 30px 4px
+                +tablet
+                    padding: 6px 50px 4px
+                p
+                    margin-bottom: 28px
+                    line-height: 22px
+                    color: #000000
+                    opacity: 0.7
+
+    &--message
+        .modal-dialog
+            max-width: 432px
+            .modal
+                &-header
+                    padding-top: 44px
+                    button
+                        position: absolute
+                        top: 20px
+                        right: 20px
+                &-body
+                    padding: 36px 35px
+                    text-align: center
+                    p
+                        color: $gray-default

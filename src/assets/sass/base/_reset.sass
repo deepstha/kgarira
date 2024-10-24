@@ -1,0 +1,119 @@
+img
+    max-width: 100%
+    height: auto
+    image-rendering: -webkit-optimize-contrast
+
+[class*="img-rap"]
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+.img
+    &-wrap
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        height: 100%
+        &--repeat
+           background-repeat: repeat
+        &--contain
+            background-size: contain
+    &-auto
+        img
+            height: 100% !important
+            width: auto !important
+            .error-404 &
+                max-height: 250px
+                +fullhd
+                    max-height: inherit
+            .error-server &
+                max-height: 250px
+                +fullhd
+                    max-height: inherit
+    &--absolute
+        @extend %absolute
+//paragraph
+p
+    margin-bottom: 1.7rem
+    small
+        font-size: 0.68em
+small
+    font-size: 0.5em
+    // font-family: 'Montserrat', sans-serif
+    margin-bottom: 3px
+    +desktop
+        font-size: 0.45em
+
+blockquote
+    font-style: italic
+//label                
+label
+    line-height: 1.25rem
+    font-size: 0.875rem
+
+//input
+input
+    font-size: 1rem
+    +border-radius(5px)
+    padding: .9375rem
+    border: none
+    min-height: 3rem
+    +box-shadow(none)
+    +border-radius(.5rem)
+    -webkit-appearance: none
+    appearance: none
+    +placeholder-color($text-500)
+    &[type=search]
+        +placeholder-color($white-color)
+        -webkit-appearance: none
+        appearance: none
+
+    &:focus
+        border: none
+        outline: none
+    &.input
+        &-blank
+            background-color: transparent
+            border: none
+            padding: 2px
+            &__number
+                width: 50px
+                text-align: center
++placeholder-color($white-color)
+//iframe
+iframe
+    width: 100%
+    max-width: 100%
+
+//table
+table
+    width: 100%
+    tr,td, th
+        border: 1px solid $border-color
+        padding: 5px 10px
+    p
+        margin-bottom: 0
+    .td
+        &-min
+            &-w
+                min-width: 60px
+                display: inline-block
+//button
+.btn, button
+    &:focus
+        outline: none !important
+
+
+ul
+    li 
+        list-style: none
+    &.list-disc
+        li
+            list-style: disc
+
+//anchor
+a
+    &:focus
+        text-decoration: none
+        color: $primary-color
+        outline: 0
+

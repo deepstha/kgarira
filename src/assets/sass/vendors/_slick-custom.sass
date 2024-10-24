@@ -1,0 +1,102 @@
+.slick
+    &-slider
+        .megamenu &
+            margin: 0 -6px
+
+    &-slide
+        margin-left: 20px
+        margin-right: 20px
+        .trusted__slider &
+            +desktop
+                margin-left: 1.875rem
+                margin-right: 1.875rem
+            img
+                max-height: 1.8rem
+                +desktop
+                    max-height: 2.5rem
+
+        img
+            display: inline-block
+            text-indent: -9999px
+
+        .megamenu--resources &
+            min-width: 168px
+            margin: 0 6px
+            p
+                display: inline-block
+                width: 100%
+        &.slick-active
+            .megamenu--resources &
+                display: block
+                p
+                    display: block
+    &-track
+        @extend .display-flex
+        .megamenu--resources &
+            min-width: 16.125rem
+        .center &
+            @extend .item-center
+
+    &-dots
+        height: 7px
+        @extend .item-center
+        bottom: -30px
+        li
+            margin: 0 3px
+            height: 6px
+            width: 6px
+            &.slick-active
+                button
+                    background: $primary-color
+            button
+                padding: 0
+                height: 7px
+                width: 7px
+                +border-radius(50%)
+                background: $text-300
+                &:before
+                    display: none
+    &-arrow
+        height: 40px
+        width: 40px
+        background: $white-color
+        +border-radius(50%)
+        border: 1px solid $text-200
+        top: 76%
+        +transform(translateY(0))
+        z-index: 1
+        +mobile
+            width: 40px
+            height: 40px
+            top: 26%
+            transform: translateY(-25%)
+        &:hover,
+        &:active
+            +box-shadow(0 0 20px rgba(0, 0, 0, 0.15))
+            z-index: 1
+            background: $white-color
+    &-prev
+        +mobile
+            left: 10px
+        +tablet
+            left: auto
+            right: 10.5%
+        +laptop
+            right: 8.5%
+    &-next
+        +mobile
+            right: 10px
+        +desktop-mini
+            right: 4.5%
+    &-prev:before,
+    &-next:before
+        content: ''
+        background: url('../images/testimonial/arrow.svg') no-repeat center
+        height: 24px
+        width: 24px
+        display: inline-flex
+        +mobile
+            height: 18px
+            width: 18px
+    &-next:before
+        +transform(rotate(180deg))

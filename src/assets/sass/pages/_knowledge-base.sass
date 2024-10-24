@@ -1,0 +1,114 @@
+.knowledge
+    &-list
+        padding: 40px 0
+        +tablet
+            padding: 70px 0
+        +laptop
+            padding: 60px 0 120px
+        &__header
+            margin-bottom: 60px
+            
+            .inner-list &
+                margin-bottom: 40px
+        .form-group
+            +desktop-mini
+                float: right
+                width: 300px
+                margin: 0
+        &__grid
+            +laptop
+                margin-top: 14px
+            .wrapper
+                & + .wrapper
+                    margin-top: 30px
+                    +laptop
+                        margin-top: 84px
+            .heading
+                margin-bottom: 30px
+                +desktop-mini
+                    margin-bottom: 3.75rem
+                +desktop-max
+                    text-align: center
+                h4
+                    text-transform: uppercase
+            .card-grid
+                .card
+                    border: 1px solid rgba(0, 0, 0, 0.1)
+                    background: rgba(236, 230, 242, 0.1)
+                    border-radius: 8px
+                    padding: 36px 20px 29px 36px
+                    +flex-direction(row)
+                    +align-items(flex-start)
+                    margin-bottom: 36px
+                    .tag-icon
+                        padding: 0
+                        margin-right: 24px
+                        min-width: 48px
+                        min-height: 48px
+                        @extend .display-flex
+                        +border-radius(6px)
+                        +justify-content(center)
+                        +align-items(center)
+                        img 
+                            width: 24px
+                            height: 24px
+                    .caret-right
+                        margin-left: 11px
+                    &-list
+                        .card-title
+                            margin-bottom: 18px
+                            display: block
+                            @extend %body-font
+                        ul
+                            margin-bottom: 12px
+                            li 
+                                margin-bottom: 12px
+                                a
+                                    @extend %body-font
+                                    color: $text-700
+                                    @extend %regular
+                        .btn-wrap
+                            padding-left: 32px
+                            +mobile-sm-max
+                                margin-top: 10px
+                            a
+                                line-height: 20px
+                                span
+                                    display: inline-block
+                                    &:last-of-type
+                                        margin-left: 5px
+                                        +transition(transform .4s ease)
+                                    &.up
+                                        +transform(rotate(180deg))
+
+        &__rows
+            h4
+                color: $black-color
+                margin-bottom: 0.8125rem
+                line-height: 1
+            span
+                display: inline-block
+                line-height: 1
+            .row-item
+                display: flex
+                align-items: flex-start
+                border-top: 1px solid #D5CFDB
+                padding: 30px 0
+                &:nth-of-type(1)
+                    margin-top: 30px
+                img
+                    margin-right: 16px
+                //&__info
+                a
+                    color: $gray-dark
+                    @extend %body-font
+                    margin-bottom: 14px
+                    line-height: 1
+                p
+                    margin-bottom: 12px
+                img
+                    margin-right: 8px
+        .load-more
+            padding-top: 25px
+
+

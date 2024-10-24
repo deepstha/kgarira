@@ -1,0 +1,59 @@
+.preloader 
+    width: 100vw
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    background: white
+    z-index: 99999999
+    overflow: hidden
+    &::after
+        @extend %content
+        width: 5rem
+        height: 5rem
+        border: 2px solid $text-100
+        border-top: 3px solid $primary-color
+        +border-radius(100%)
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+        animation: spin 1s infinite ease
+
+    .loaded &
+        display: none
+    &-sm
+        height: 2rem
+        width: 100%
+        position: relative
+        margin: 0 auto
+        min-width: 0
+        +transition(all 0.3s linear)
+        &:after
+            height: 2rem
+            width: 2rem
+            .form-action &
+                height: 1.2rem
+                width: 1.2rem
+
+        .form-action &
+            min-width: 1.2rem
+            margin-left: 8px
+            background: transparent
+            width: auto
+            margin-right: 0
+
+#preloader-logo 
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+
+
+
+
+

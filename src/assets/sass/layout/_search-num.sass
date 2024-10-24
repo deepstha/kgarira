@@ -1,0 +1,206 @@
+.search
+    &-form
+        max-width: 48.75rem
+        margin: 0 auto
+        &.section-lifted
+            margin-top: -65px
+            @extend %relative
+            z-index: 1
+            .search-num 
+                padding: 1.5rem 2rem
+        .card
+            +border-radius(.75rem)
+            background-color: #fff
+            .blog-inner &
+                margin-bottom: 1.25rem
+                padding: .625rem .875rem 1.25rem !important
+                +box-shadow(none)
+            +desktop-max
+                margin: 0 40px
+            +mobile
+                padding: 1.5rem
+                +tablet-sm-max
+                    padding: 1.2rem
+                margin: 0 15px
+    &-num
+        padding: 0
+        +tablet
+            padding: 1.5rem 2rem 0
+        .form-row
+            margin: 0 -0.625rem
+            +display-flex
+            +flex-wrap(wrap)
+            & >[class*=col-]
+                padding-right: 10px
+                padding-left: 10px
+        .col
+            &-fixed-width
+                +mobile
+                    margin-bottom: 10px
+                max-width: 100%
+                #phoneNum
+                    padding-left: 50px
+                    border: 1px solid $primary-200
+                .bootstrap-select
+                    width: 100% !important
+                    +border-radius(10px)
+                    .dropdown-toggle
+                        border: 1px solid $primary-200
+                        background: $primary-50
+                        padding: 15px 16px
+                        color: $text-700 !important
+                        outline: 0 !important
+                        @extend %body-font
+                        @extend %regular
+                        .filter-option
+                            overflow: visible
+                            &-inner
+                                &-inner
+                                    overflow: visible
+                        .bs-caret
+                            display: none
+                        &::after
+                            content: url(/src/assets/images/caret-down.png)
+                            border: none
+                        &:hover
+                            +transform(none)
+                    .dropdown-menu
+                        max-height: 300px !important
+                        +border-radius(10px)
+                        padding: 0
+                        ul
+                            padding: 12px 0
+                            li
+                                a
+                                    outline: 0 !important
+                                    padding: 6px 16px !important
+                                    @extend .display-flex
+                                    +align-items(center)
+                                    padding: 5px 0
+                                    line-height: 16px
+                                    .flag
+                                        margin-right: 10px
+            &-auto
+                +mobile
+                    width: 100%
+                margin-left: 0
+                +desktop-mini
+                    margin-left: .7rem
+                min-width: 6.5rem
+                & >
+                    *
+                        width: 100%
+                button
+                    width: 100%
+                    padding: 14px 27px
+    &-results
+        padding-left: 0.625rem
+        +mobile-sm
+            padding-right: 0.5rem
+        .title
+            @extend .text-smbold
+        .card
+            cursor: pointer
+            +border-radius(10px)
+            padding: 20px 16px 18px !important
+            li
+                &::marker
+                    font-size: 0
+            &-sm
+                margin: 0
+                min-height: 52px
+                +mobile
+                    margin: 0 3px
+                .block-absolute--topLeft
+                    top: -0.6125rem
+                    background-image: url(/src/assets/images/sprites/select-number-check.png)
+                    width: 30px
+                    height: 30px
+                    background-position: -53px -10px
+                    background-repeat: no-repeat
+                    +mobile
+                        left: -5px
+
+            &.selected
+                border-color: #4C9610
+                .block-absolute--topLeft
+                    background-position: -10px -10px
+                    animation: scale 0.3s ease
+
+            .i-block
+                &__img
+                    .icon-border
+                        +border-radius(12px)
+                &__content
+                    a
+                        font-family: Manrope
+                        @extend %bold
+                        line-height: 16px
+                        color: $text-700
+                    span
+                        font-family: Manrope
+                        @extend %medium
+                        font-size: 0.8125rem
+                        color: $text-400
+        &__title
+            margin-bottom: 20px
+        &__loadmore
+            font-size: 1.125rem
+        &__features
+            margin-top: 18px
+            ul li
+                +tablet-sm-max
+                    margin-right: 20px
+                +mobile-sm-max
+                    margin-right: 15px
+            &>span
+                color: $text-400
+                line-height: 14px
+                display: block
+                margin-bottom: 8px
+            .i-block
+                .icon-border
+                    border-radius: 8px !important
+
+                &__content
+                    span
+                        color: $text-700 !important
+        .row
+            margin: 0 -0.625rem 0 -0.9375rem
+        .d-grid-3
+            +desktop-max
+                grid-template-columns: repeat(2, 1fr)
+                .card-sm
+                    max-width: 100%
+            +tablet-sm-max
+                grid-template-columns: repeat(1, 1fr)
+
+    &-footer
+        margin-top: 30px !important
+        .title
+            color: $text-400
+            @extend %semi-bold
+        ol
+            margin-left: 18px
+            li
+                display: list-item
+                counter-increment: list
+                list-style-type: none
+                &::before
+                    color: $text-400
+                    @extend %semi-bold
+                    content: counter(list) "."
+                    left: 12px
+                    @extend %absolute
+                    text-align: right
+                    width: 16px
+                .data-col-auto
+                    margin-left: 16px
+                &:not(:last-child)
+                    margin-bottom: 5px
+        .btn
+            background-color: #70AB40
+            border-color: #70AB40
+            +tablet-sm-max
+                width: 100%
+                margin-top: 20px

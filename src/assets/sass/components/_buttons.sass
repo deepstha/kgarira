@@ -1,0 +1,198 @@
+.btn
+    font-size: 14px
+    line-height: 1
+    padding: 14px 25px
+    @extend .item-center
+    @extend %semi-bold
+    box-sizing: border-box
+    outline: 0
+    height: 44px
+    vertical-align: middle
+    @extend .text-center
+    transition: all .5s ease
+    +border-radius(8px)
+    +box-shadow(none)
+    @extend %body-font
+    +laptop
+        padding: .875rem 2rem
+    & + .btn
+        margin-left: 20px
+    +mobile-sm-max
+        min-width: 100%
+        width: 100%
+    &:focus,&:not(:disabled):not(.disabled):active:focus
+        +box-shadow(none)
+    & +
+        .btn
+            margin-left: 1.5rem
+            +mobile-sm-max
+                margin-left: 0
+                margin-top: 14px
+    &-inner
+        min-width: 6.25rem
+        min-height: 2.8125rem
+        @extend .item-center
+    &.close
+        width: auto
+        height: auto
+    &-primary
+        background-color: $primary-color
+        color: $white-color
+        border-color: $primary-color
+        &:hover
+            background-color: $primary-600
+            border-color: $primary-600
+        &:focus, &:not(:disabled):not(.disabled):active
+            background-color: $primary-700
+            border-color: $primary-700
+        svg, path
+            fill: $white-color
+
+        &.has-shadow
+            +box-shadow(0px 5px 50px rgba(57, 1, 121, 0.3))
+            +mobile-sm
+                +box-shadow(0px 15px 50px rgba(57, 1, 121, 0.3))
+
+    &-secondary
+        background-color: $primary-200
+        border-color: $primary-200
+        color: $primary-color
+        +box-shadow(0px 15px 50px rgba(0, 0, 0, 0.1))
+        &:hover,
+        &:focus
+            background-color: $primary-200
+            border-color: $primary-200
+            color: $primary-color
+            +box-shadow(0px 15px 50px rgba(0, 0, 0, 0.2))
+        &:not(:disabled):not(.disabled):active
+            background-color: $primary-color
+            color: $white-color
+            +box-shadow(0px 15px 50px rgba(0, 0, 0, 0.2))
+            .arrow-fill-right
+                border-left: 12px solid $white-color
+    &-tertiary
+        background-color: $primary-50
+        color: $primary-color
+        border-color: $primary-50
+        &:hover, &:active
+            background-color: $primary-50
+            color: $primary-color
+            border-color: $primary-50
+    &-white 
+        background-color: $white-color
+        color: $primary-color
+        border-color: $white-color
+        &:hover, &:active
+            background-color: $primary-50
+            color: $primary-color
+            border-color: $primary-50
+        svg, path
+            fill: $primary-color
+    &-outline
+        border: 1px solid $primary-color
+        color: $primary-color
+        background: $white-color
+        &:hover
+            color: $primary-color
+            border-color: $primary-600
+            background-color: $primary-50
+        &:focus,
+        &:not(:disabled):not(.disabled):active, 
+        &:not(:disabled):not(.disabled):active:focus
+            color: $primary-700
+            border-color: $primary-700
+            background-color: $primary-100
+
+        &-primary
+            border-color: $primary-color
+            color: $primary-color
+            &:hover
+                color: $primary-500
+                border-color: $primary-400
+                background-color: transparent
+            &:focus
+                +box-shadow(none)
+            &:not(:disabled):not(.disabled):active, &:focus,&:not(:disabled):not(.disabled):active:focus
+                color: $primary-500
+                border-color: $primary-400
+                background-color: $white-color
+                +box-shadow(none)
+            &.br-3
+                +border-radius(3px)
+            &.has-shadow
+                +box-shadow(0px 7.26404px 14.5281px rgba(57, 1, 121, 0.05))
+            &.bw
+                border-width: 1.45px
+                background-color: rgba($white-color, 0.7)
+    &-icon
+        .icon
+            width: 20px
+            height: 20px
+            margin-left: 10px
+            margin-right: 0
+        &-primary
+            background-color: $primary-color
+            color: $white-color
+            border-color: $primary-color
+    &-text
+        padding: 0
+        color: $primary-color
+        border: none
+        height: 0
+        .icon
+            width: 16px
+            height: 16px
+            padding-left: 7px
+            display: inline-block
+            +transition(all 0.5s ease)
+        &:hover
+            color: $primary-color
+            .icon
+                margin-left: 6px
+    &-sm
+        height: 40px
+        line-height: 1
+        padding: 13px 20px
+    &-md
+        min-width: 9.375rem
+
+    &-xs
+        height: 34px
+        min-width: 165px
+        padding: 10.9px 34px
+        font-size: 0.8125rem
+        line-height: 1 
+    &-red
+        background-color: #D4534D
+        border-color: #D4534D
+        height: 40px
+        +border-radius(6px)
+        color: $white-color
+        width: 100%
+        +desktop-max
+            height: 44px
+        +laptop
+            width: 240px
+        &:hover
+            color: $white-color
+            background-color: rgba(#D4534D, 0.8)
+    &-black
+        background: $black-color
+        color: $white-color
+        padding: 1.5625rem 1.6875rem
+        min-height: 5.25rem
+    &-shadow
+        +box-shadow(0px 5px 10px rgba(0, 0, 0, 0.1))
+    &-dashed
+        border: 1px dashed #D7CCE4
+        +border-radius(2px)
+    &-square
+        +border-radius(0px)
+        height: 33px
+        width: 100%
+        font-size: 0.625rem
+    &.opacity
+        opacity: 0.2
+        cursor: not-allowed
+    .icon
+        margin-left: .625rem

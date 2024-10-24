@@ -1,0 +1,275 @@
+.c-wrap
+    .row
+        [class*='col-']
+            &:first-of-type
+                +desktop-max
+                    order: 1
+    &__content
+        .feature &
+            +desktop-max
+                text-align: center
+        .btn
+            margin-top: .625rem
+            &-text
+                .feature &
+                    font-size: 1.125rem
+
+                +mobile
+                    margin-bottom: 15px
+        p
+            +desktop-max
+                margin-bottom: 15px
+    &__title
+        margin-bottom: 1.0625rem
+        +desktop-max
+            margin-bottom: .9375rem
+        color: $text-700
+        @extend %medium
+        span
+            @extend %bold
+            color: $primary-color
+        .inner-pg &
+            @extend %semi-bold
+            margin-bottom: 20px
+            line-height: 1.34
+    &__imgWrap
+        @extend %relative
+        figure
+            margin: 0
+            +desktop-max
+                text-align: center
+                margin-bottom: 20px
+            img
+                +desktop-max
+                    width: 100%
+        .c-wrap__animation
+            .lottie
+                height: 100%
+            +desktop-max
+                height: auto
+                padding: 0 12rem
+            +mobile
+                padding: 0 4rem
+            
+    &__img
+        display: none
+        +desktop-mini
+            display: block
+
+    &__mobile
+        +desktop-mini
+            display: none
+
+.row
+    &-1
+        @extend %relative
+        padding-bottom: 30px
+        +tablet
+            padding-bottom: 70px
+        +desktop-mini
+            padding-bottom: 120px
+        .c-wrap
+            &__img
+                &:nth-child(1)
+                    +fullhd
+                        // min-width: 718px
+                        margin: 8px 0 0 0
+                        -webkit-filter: drop-shadow(0px 25px 50px rgba(0, 0, 0, 0.15))
+                        filter: drop-shadow(0px 25px 50px rgba(0, 0, 0, 0.15))
+                &:nth-child(2)
+                    @extend %absolute
+                    top: 6.5%
+                    left: -8px
+                    filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.5))
+                    +border-radius(8px)
+                    max-width: 20px
+                    +laptop
+                        left: -6px
+                        top: 7.5%
+                    +fullhd
+                        top: 7.5%
+                        left: -7px
+                        transform: scale(1)
+                &:nth-child(3)
+                    @extend %absolute
+                    top: 6.5%
+                    left: 15.5%
+                    +box-shadow(0px 4px 30px rgba(0, 0, 0, 0.3))
+                    +border-radius(7px)
+                    // max-width: 140px
+                    +laptop
+                        left: 21.5%
+                        top: 11.5%
+                    +fullhd
+                        top: 11%
+                        left: 24.3%
+                        transform: scale(1)
+                &:nth-child(4)
+                    @extend %absolute
+                    top: 22.8%
+                    left: 0%
+                    +box-shadow(0px 4px 30px rgba(57, 1, 120, 0.5))
+                    +border-radius(2px)
+                    max-width: 120px
+                    +laptop
+                        left: 5%
+                        top: 23.8%
+                    +fullhd
+                        top: 24.2%
+                        left: 5.2%
+                        transform: scale(1)
+                &:nth-child(5)
+                    @extend %absolute
+                    top: 53.5%
+                    left: 42%
+                    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.3))
+                    // max-width: 200px
+                    +laptop
+                        top: 55.5%
+                        left: 52%
+                    +fullhd
+                        top: 56.9%
+                        left: 53.5%
+                        transform: scale(1)
+            &__imgWrap
+                .prop-eclipse
+                    top: auto
+                    bottom: -71px
+                    left: 70%
+                    +desktop-mini
+                        left: 60%
+                    +laptop
+                        left: 70%
+                    +fullhd
+                        left: 79%
+            &__content
+                padding: 0
+                +tablet
+
+                +desktop-mini
+
+                +desktop-mini
+
+                +laptop
+                    padding-right: 60px
+                +fullhd
+                    padding-right: 140px
+
+    &-2
+        @extend %relative
+        padding-bottom: 0
+        +desktop-mini
+            padding-bottom: 200px
+        +fullhd
+            padding-bottom: 140px
+        .c-wrap
+            &__content
+                +desktop-mini
+                    padding: 0 0 0 98px
+                +fullhd
+                    padding: 130px 20px 0 130px
+            &__img
+                +box-shadow(0 25px 50px rgba(0 , 0, 0, 0.15))
+                +border-radius(11px)
+                &:nth-child(1)
+                    left: 0
+                    +laptop
+                        max-width: 687px
+                &:nth-child(2)
+                    @extend %absolute
+                    top: 56%
+                    left: auto
+                    margin-left: 90px
+                    width: 90.5%
+                    +laptop
+                        margin-left: 160px
+                        width: auto
+                &:nth-child(3)
+                    @extend %absolute
+                    top: 89%
+                    left: 11.2%
+                    width: 60.5%
+                    +laptop 
+                        width: auto
+            &__imgWrap
+                .prop-eclipse
+                    +box-shadow(none)
+                    left: 41%
+                    +tablet
+                        top: 59%
+                    +desktop-mini
+                        top: 95%
+    &-3
+        +fullhd
+            margin-top: -22px
+        @extend %relative
+        padding-bottom: 30px
+        +tablet
+            padding-bottom: 70px
+        +desktop-mini
+            padding-bottom: 80px
+        +laptop
+            padding-bottom: 0
+        .c-wrap
+            &__content
+                padding: 0
+                +laptop
+                    padding: 0 60px 0 0
+                +fullhd
+                    padding: 0 54px 0 100px
+            &__animation
+                height: 550px
+                +laptop
+                    height: 650px
+                +fullhd
+                    height: auto
+                +mobile-sm-max
+                    height: 340px
+            &__img
+                +border-radius(15px)
+            &__imgWrap
+                +laptop
+                    padding-left: 50px
+                .prop-eclipse
+                    left: 53.5%
+                    top: 70.5%
+
+    &-4
+        +fullhd
+            margin-top: -29px
+        .c-wrap
+            &__content
+                padding: 0
+                +laptop
+                    padding: 0 20px 0 59px
+            &__animation
+                @extend %relative
+                +desktop-mini
+                    left: -60px
+                +fullhd
+                    min-width: 952px
+                    left: -153px
+            &__imgWrap
+                .prop-eclipse
+                    top: 70%
+                    left: -20px
+                    transform: rotate(80deg)
+                    +laptop
+                        left: -60px
+                        top: 67%
+                    +fullhd
+                        left: -100px
+
+.feature
+    background-repeat: no-repeat
+    background-position: 64% 37%
+    padding: 40px 0
+    +tablet
+        padding: 100px 0 70px
+    +desktop-mini
+        background-image: url(../images/home/features-wave.png)
+    +fullhd
+        padding: 5.1875rem 0 5.75rem
+.prop-eclipse
+    @extend %absolute
+    z-index: -1

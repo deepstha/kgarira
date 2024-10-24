@@ -1,0 +1,28 @@
+.sidebar
+    max-width: 14.25rem
+    min-width: 14.25rem
+    background-color: #F4F1F8
+    border-right: 1px solid #DBE1E5
+    max-height: 100%
+    min-height: calc( 100vh - 60px )
+    height: auto
+    +fullhd
+        max-width: 228px
+        min-width: 19.5rem
+
+    &-body
+        padding: 2rem 1.4375rem
+        height: 100%
+        &-wrapper
+            +fullhd
+                height: 100%
+            .card-wrapper
+                +fullhd
+                    height: 93%
+        .tab
+            &-content,
+            &-pane
+                height: 100%
+
+        .count
+            margin-top: 1.6rem

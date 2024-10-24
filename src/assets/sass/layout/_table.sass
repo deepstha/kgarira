@@ -1,0 +1,125 @@
+.comparison
+    padding: 40px 0 100px
+    max-height: 1000px
+    @extend %overflow-y
+    transition: max-height 2s ease-in-out
+    +tablet
+        padding: 70px 0 100px
+    +laptop
+        padding: 120px 0
+    &.full-height
+        max-height: 5000px
+        .see-more__trigger
+            background: transparent
+            +mobile
+                bottom: 25px
+    .heading
+        margin-bottom: 1.6rem
+        +laptop
+            margin-bottom: 3.75rem
+        h2
+            color: $text-900
+            @extend %semi-bold
+            line-height: 1.3125
+            
+    &__table
+        overflow-x: auto
+        +mobile-sm-max
+            border: 1px solid rgba(#B5BCC3,0.5)
+        table
+            width: 100%
+            +mobile-sm-max
+                border-collapse: separate
+                border-spacing: 0
+        th
+            @extend %medium
+            width: 45%
+            +mobile
+                position: sticky
+                top: 0
+                left: 0
+                background-color: $white-color
+            +tablet
+                width: 40%
+            +desktop
+                width: 32.4%
+        th,td
+            padding: 1rem
+            color: $text-800
+            font-size: 1rem
+            line-height: 1.33
+            vertical-align: baseline
+            border-color: #B5BCC3
+            +mobile-sm-max
+                border-color: rgba(#B5BCC3,0.5)
+            +tablet
+                padding: 1.5rem
+                font-size: 1.125rem
+            +laptop
+                padding: 26px 50px 26px 51px
+        tbody
+            td:first-of-type
+                background: #F8F6FA
+                +tablet
+                    width: 30%
+                +desktop
+                    width: 35.16%
+            tr
+                &:first-child
+                    @extend .text-center
+                    td:first-of-type
+                        img
+                            max-height: 27px
+                &:nth-child(3) 
+                    th
+                        padding-top: 1.2rem
+                        +tablet
+                            padding-top: 33px
+        .bb-0
+            border-bottom: 0
+            th,td
+                border-bottom: 0
+        .checklist-row
+            [class*= 'icon-']
+                svg
+                    +mobile
+                        height: 18px
+                        width: 18px
+            border: 0
+            th,td
+                padding: 0 1.25rem 1.125rem 
+                border-top: 0
+                border-bottom: 0
+            th
+                line-height: 1.35
+                @extend %regular
+                padding-bottom: 1rem
+                @extend %relative
+                padding-left: 3.125rem
+                +mobile
+                    position: sticky
+                +laptop
+                    padding-left: 93px
+                    padding-bottom: 1.125rem
+                    line-height: 24px
+                &:before
+                    @extend %content
+                    @extend %absolute
+                    height: 5px
+                    width: 5px
+                    +border-radius(50%)
+                    background-color: $text-800
+                    left: 1.875rem
+                    top: 19%
+                    +tablet
+                        height: 6px
+                        width: 6px
+                    +laptop
+                        left: 70px
+            td
+                @extend .text-center
+            &.pb-26
+                th,td
+                    padding-bottom: 1.2rem
+                    +laptop
+                        padding-bottom: 26px

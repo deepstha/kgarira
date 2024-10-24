@@ -1,0 +1,34 @@
+$cwidth : 30px;
+$cheight : 15px;
+$shadowColor: rgba(126, 126, 126, 0.6);
+
+//arrow
+@mixin caret($direction, $width, $height, $color) {
+	width: 0;
+	height: 0;
+	border-left: $width/2 solid transparent;
+	border-right: $width/2 solid transparent;
+	border-top: $width/2 solid transparent;
+	border-bottom: $width/2 solid transparent;
+	@if $direction == up{
+		border-bottom: $height solid $color;
+		border-top: 0;
+	} 
+	@else if $direction == down {
+		border-top: $height solid $color;
+		border-bottom: 0;
+	}
+	@else if $direction == left {
+		border-right: $height solid $color;
+		border-left: 0;
+	}
+	@else {
+		border-left: $height solid $color;
+		border-right: 0;
+	}
+}
+
+
+
+
+

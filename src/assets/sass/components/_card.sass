@@ -1,0 +1,107 @@
+.card
+    +border-radius(12px)
+    padding: 2.5rem
+    border: 0
+    &__media
+        @extend %display-flex
+        margin-bottom: 1.375rem
+        &.center
+            +justify-content(center)
+
+    &__icon
+        margin: 0 10px 0 0
+        
+    &__info
+        .text-11
+            @extend %regular
+
+    &__content
+        @extend %medium
+    &-bg
+        &-lg
+            width: 5rem
+            height: 5rem
+            +border-radius(1.25rem)
+            margin-right: 1.8125rem
+            & >
+                min-height: 2.375rem
+                max-height: 2.375rem
+    &-sm
+        min-width: 12.5rem
+        max-width: 16.125rem
+        min-height: 9.375rem
+        padding: 1.25rem 1rem
+    &-bordered
+        border: 1px solid $text-100
+    &-shadow
+        +box-shadow(0px 2px 4px rgba(0, 0, 0, 0.1))
+    &--success
+        border-color: #44C150
+        background: rgba(68, 193, 80, 0.1)
+    &--danger
+        border-color: #ED5F5F
+        background: rgba(237, 95, 95, 0.1)
+    &__heading
+        @extend %medium
+        @extend .text-6
+        margin-bottom: 16px
+        .card--success &
+            color: #44C150
+        .card--danger &
+            color: #ED5F5F
+    &__list
+        &-item
+            color: $text-700
+            &:not(:last-of-type)
+                margin-bottom: 24px
+    &-auto
+        +fullhd
+            height: 100%
+    &-grid
+        @extend %display-flex
+        +justify-content(space-between)
+        +flex-wrap(wrap)
+        &__item
+            @extend %relative
+            .card-grid--n3 &
+                width: 100%
+                +mobile-sm
+                    width: calc(96%/2)
+                    .media-kit__font &
+                        width: 100%
+                +tablet
+                    width: calc(95.5%/ 3)
+                    .media-kit__font &
+                        width: calc(96%/2)
+                +fullhd
+                    width: calc((100% - 40px) / 3)
+                    .media-kit__font &
+                        width: calc((100% - 40px) / 3)
+            .card-grid--n4 &
+                width: 100%
+                +mobile-sm
+                    width: calc(96%/ 2)
+                +tablet
+                    width: calc(92%/ 4)
+                +fullhd
+                    width: calc((100% - 162px) / 4)
+
+        &--n2 
+            .card
+                width: 100%
+                +desktop-mini
+                    width: calc((100% - 36px) / 2)
+
+    &-dashed
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%2300000033' stroke-width='2' stroke-dasharray='12%2c8' stroke-dashoffset='36' stroke-linecap='square'/%3e%3c/svg%3e")
+    &-center
+        @extend .item-center
+
+
+    
+
+    
+
+    
+    
+   

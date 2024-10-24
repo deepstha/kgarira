@@ -1,0 +1,123 @@
+@import 'flex'
+@import 'caret'
+@import 'fontface'
+
+// Split Column
+=list-col($num)
+    -webkit-column-count: $num
+    -moz-column-count: $num
+    -ms-column-count: $num
+    // -o-column-count: $num
+    column-count: $num
+
+// animation frame
+=animation($animation, $time, $transition)
+    -webkit-animation: $animation $time $transition
+    // -o-animation: $animation $time $transition
+    -moz-animation: $animation $time $transition
+    animation: $animation $time $transition
+
+// transition
+=transition($transition)
+    transition: $transition
+    -webkit-transition: $transition
+    -moz-transition: $transition
+
+// transform
+=transform($transform)
+    transform: $transform
+    -webkit-transform: $transform
+    -moz-transform: $transform
+
+//transform origin
+=transform-origin($origin)
+    transform-origin: $origin
+    -webkit-transform-origin: $origin
+    -moz-transform-origin: $origin
+
+// Cubic transition    
+=cubic
+    -webkit-transition: all 0.2s cubic-bezier(0.250, 0.250, 0.750, 0.750)
+    -moz-transition: all 0.2s cubic-bezier(0.250, 0.250, 0.750, 0.750)
+    // -o-transition: all 0.2s cubic-bezier(0.250, 0.250, 0.750, 0.750)
+    transition: all 0.2s cubic-bezier(0.250, 0.250, 0.750, 0.750)
+
+=cubic-slow
+    -webkit-transition: all 0.6s cubic-bezier(0.250, 0.250, 0.750, 0.750)
+    -moz-transition: all 0.6s cubic-bezier(0.250, 0.250, 0.750, 0.750)
+    // -o-transition: all 0.6s cubic-bezier(0.250, 0.250, 0.750, 0.750)
+    transition: all 0.6s cubic-bezier(0.250, 0.250, 0.750, 0.750)
+
+// calculate width
+=calc($property, $expression)
+    #{$property}: -moz-calc(#{$expression})
+    #{$property}: -webkit-calc(#{$expression})
+    #{$property}: calc(#{$expression})
+
+// border element
+// border
+=border($width, $style, $color, $dir: null)
+    @if $dir
+        border-#{$dir}: $width $style $color
+    @else
+        border: $width $style $color
+
+// border radius
+=border-radius($radius)
+    border-radius: $radius
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius
+
+// box shadow
+=box-shadow($box-shadow)
+    box-shadow: $box-shadow
+    -webkit-box-shadow: $box-shadow
+    -moz-box-shadow: $box-shadow
+
+//traingle css
+=arrow-down($width, $style, $color)
+    border-top: $width $style $color
+    border-left: $width $style transparent
+    border-right: $width $style transparent
+    width: 0 !important
+    height: 0 !important
+
+=bg-gradient ( $deg, $color1, $ratio1, $color2, $ratio2)
+    background: $color1
+    background: -webkit-linear-gradient($deg, $color1 $ratio1, $color2 $ratio2)
+    // background: -o-linear-gradient($deg, $color1 $ratio1, $color2 $ratio2)
+    background: -moz-linear-gradient($deg, $color1 $ratio1, $color2 $ratio2)
+    background: linear-gradient($deg, $color1 $ratio1, $color2 $ratio2)
+
+=gradient ( $deg, $color1, $color2)
+    background: $color1
+    background: -webkit-linear-gradient($deg, $color1, $color2)
+    // background: -o-linear-gradient($deg, $color1, $color2)
+    background: -moz-linear-gradient($deg, $color1, $color2)
+    background: linear-gradient($deg, $color1, $color2)
+
+//arrow without fill
+=angle($direction, $width, $height, $border, $color)
+    position: absolute
+    z-index: 11
+    display: block
+    width: $width
+    height: $height
+    @if $direction == down
+        border-top: $border solid $color
+        border-left: $border solid $color
+
+    @else if $direction == up
+        border-top: $border solid $color
+        border-right: $border solid $color
+
+=placeholder-color($color)
+    ::-webkit-input-placeholder //* WebKit browsers */
+        color: $color
+    ::-moz-placeholder //* Mozilla Firefox 4 to 18 */
+        color: $color
+    ::-moz-placeholder //* Mozilla Firefox 19+ */
+        color: $color
+    ::-ms-input-placeholder //* Internet Explorer 10+ */
+        color: $color
+

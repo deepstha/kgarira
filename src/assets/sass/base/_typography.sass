@@ -1,0 +1,127 @@
+h1,h2,h3,h4,h5,h6
+    @extend %body-font
+
+h1
+    line-height: 1.5
+    font-size: 4.5rem //72px
+h2
+    line-height: 1.35
+    font-size: 3rem //48px
+h3
+    line-height: 1.44
+    font-size: 2.5rem //40px
+h4
+    line-height: 1.21
+    font-size: 2rem //32px
+h5
+    line-height: 1.2
+    font-size: 1.5rem //24px
+h6
+    line-height: 1.17
+    font-size: 1rem
+
+.text
+    &-1
+        line-height: 1.5
+        @extend %body-font
+        font-size: 2.9rem //72px
+        +laptop
+            font-size: 4.5rem //72px
+    &-2
+        line-height: 1.18
+        @extend %body-font
+        font-size: 1.8rem
+        +laptop
+            font-size: 2rem
+
+    &-3
+        @extend %body-font
+        font-size: 2rem
+        line-height: 1.4
+        +fullhd
+            font-size: 2.5rem //40px
+    &-4
+        line-height: 1.1
+        @extend %body-font
+        font-size: 1.8rem
+        +fullhd
+            font-size: 2rem //32px
+    &-5
+        @extend %body-font
+        line-height: 1.5
+        font-size: 1.75rem //28px
+    &-6
+        line-height: 1.2
+        @extend %body-font
+        font-size: 1.5rem //24px
+    &-7
+        line-height: 1
+        @extend %body-font
+        font-size: 1.38rem //22px
+    &-8
+        line-height: 1.4
+        font-size: 1.25rem //20px
+    &-9
+        line-height: 1.33
+        font-size: 1.125rem //18px
+    &-10
+        line-height: 1.625
+        font-size: 1rem //16px
+    &-11
+        line-height: 1.57
+        font-size: 1rem //15px
+    &-12
+        line-height: 1
+        font-size: .875rem //14px
+    &-13
+        line-height: 1
+        font-size: 0.8125rem //13px
+    &-small
+        line-height: 1.20
+        font-size: 0.75rem //12px
+    &-center
+        text-align: center
+    &-xtr-bold
+        font-weight: 900
+    &-xtr-lt
+        font-weight: 200
+    &-lt
+        @extend %light
+    &-regular
+        @extend %regular
+    &-md
+        @extend %medium
+    &-smbold
+        @extend %semi-bold
+    &-bold
+        @extend %bold
+    &-bolder
+        @extend %bolder
+    &-underline
+        text-decoration: underline !important
+    // text color
+    &-primary
+        color: $primary-color !important
+    &-p500
+        color: $primary-500
+    &-900
+        color: $text-900
+    &-800
+        color: $text-800
+    &-700
+        color: $text-700
+    &-600
+        color: $text-600
+    &-500
+        color: $text-500
+    &-default
+        color: $text-default
+    &-info
+        color: $info-default
+    &-black
+        color: $text-black
+
+.body-font
+    @extend %body-font
+.title
+    @extend %body-font

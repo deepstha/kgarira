@@ -1,0 +1,102 @@
+//Vendors
+@import './vendors/bootstrap'
+@import './vendors/daterangepicker'
+@import './vendors/bootstrap-select'
+
+//base layout
+@import './base/base'
+
+//Vendors custom css
+@import './vendors/slick-custom'
+@import './vendors/intel-tel-input'
+
+//Components
+@import './Components/buttons'
+@import './Components/icon'
+@import './Components/tag'
+@import './Components/heading'
+@import './Components/accordion'
+@import './Components/rating'
+@import './Components/card'
+@import './Components/form'
+@import './Components/switch'
+@import './Components/tab'
+@import './Components/offcanvas'
+@import './Components/loading'
+@import './Components/modal'
+@import './components/toast'
+@import './components/cookie'
+@import './components/sidebar'
+@import './components/fixedScrollTabs'
+@import './components/breadcrumb'
+@import './components/calender'
+@import './components/progress'
+@import './components/dropdown'
+
+//layout
+@import './layout/navbar'
+@import './layout/banner'
+@import './layout/footer'
+@import './layout/cta'
+@import './layout/megamenu'
+@import './layout/wp-layout'
+@import './layout/list'
+@import './layout/grid'
+@import './layout/sidebar'
+@import './layout/widget'
+@import './layout/chart'
+@import './layout/search-num'
+@import './layout/common/form'
+@import './layout/common/card'
+@import './layout/common/modal'
+
+
+//pages
+@import './pages/blogs'
+@import './pages/404'
+@import './pages/search'
+@import './pages/knowledge-base'
+
+
+// themes
+@import './themes/theme'
+
+body, html
+    color: $text-default
+    font-weight: 500
+    @extend %body-font
+    scroll-behavior: smooth
+    line-height: 1.5
+    -ms-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    -moz-font-smoothing: unset
+    -moz-osx-font-smoothing: grayscale
+    font-smoothing: antialiased
+    -webkit-backface-visibility: hidden
+    -moz-backface-visibility: hidden
+    backface-visibility: hidden
+    scroll-padding-top: 125px
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.005)
+    @extend %body-font
+    font-size: 14px
+    +desktop-mini
+        font-size: 15px
+    +fullhd
+        font-size: 16px
+
+    &::-webkit-input-placeholder  //* Chrome/Opera/Safari */
+        color: $text-500
+
+    &::-moz-placeholder  //* Firefox 19+ */
+        color: $text-500
+
+    &:-ms-input-placeholder  //* IE 10+ */
+        color: $text-500
+
+    &:-moz-placeholder //* Firefox 18- */
+        color: $text-500
+.body
+    &-container
+        // height: 100vh

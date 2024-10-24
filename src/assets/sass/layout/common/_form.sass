@@ -1,0 +1,73 @@
+//Modification for form elements classes throughout the site
+.form
+    &-control
+        //Career input
+        .career-vacancy &
+            +border-radius(8px)
+            border-color: #CAD5E0
+        .contact__form & 
+            +border-radius(10px)
+    &-group
+        .contact__form &
+            margin-bottom: 14px
+    &-newsletter
+        margin-bottom: 30px
+        border-radius: 10px
+        padding: 28px
+        border: 1px solid #DADEE1
+        &.props
+            @extend %relative
+            &::after,&:before
+                @extend %content
+                @extend %absolute
+                background-repeat: no-repeat
+                background-size: contain
+                +mobile
+                    display: none
+            &:before 
+                top: 1.875rem
+                left: .9375rem
+                background-image: url('../images/blogs/newsletter/props-1.png')
+                min-width: 3.625rem
+                min-height: .9375rem
+            &::after
+                top: 0
+                left: auto
+                right: 0
+                background-image: url('../images/blogs/newsletter/props-2.png')
+                width: 10.06rem
+                height: 4.09rem
+        &.contact-newsletter
+            margin: 0
+            padding: 30px
+            width: 100%
+            +desktop-mini
+                padding: 50px
+        +desktop-mini
+            margin-bottom: 60px
+            padding: 40px
+        +laptop
+            padding: 55px 58px
+        h5
+            font-family: Heebo
+            margin-bottom: 11px
+            color: #000000
+            line-height: 1
+        span
+            line-height: 1
+        input
+            border: 1px solid rgba(181, 188, 195, 0.5)
+            background: #FFFFFF
+            +border-radius(8px)
+            margin-top: 27px
+            min-height: 44px
+        button
+            margin: 15px 0 31px
+            height: 44px
+            +mobile
+                margin: 15px 0 20px
+        small
+            color: #465868
+    &-action
+        .btn-block
+            padding: 0 31%

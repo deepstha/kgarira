@@ -1,0 +1,348 @@
+.footer    
+    &-sitemap
+        background: rgba(#C4C4C4, 0.1)
+        padding: 25px 0 40px
+        +desktop-mini
+            padding: 69px 0 72px
+    &-list
+        &__item
+            &:nth-of-type(1),
+            &:nth-of-type(2)
+                +desktop-max
+                    width: 50%
+                    margin-bottom: 30px
+                +mobile
+                    width: 100%
+                    margin-bottom: 0
+            &:nth-of-type(3),
+            &:nth-of-type(4),
+            &:nth-of-type(5)
+                +desktop-max
+                    width: 33%
+                +mobile
+                    width: 100%
+            &:nth-of-type(1),
+            &:nth-of-type(3)
+                .accordion:not(:last-of-type)
+                    +mobile-sm
+                        margin-bottom: 8px
+                .accordion:last-of-type
+                    h6
+                        +mobile-sm
+                            margin-bottom: 6px
+            width: 100%
+            +desktop-mini
+                width: 20%
+            +fullhd
+                width: 252px
+        h6
+            margin-bottom: 14px
+            color: $primary-color
+            @extend %medium
+            line-height: 1.625
+            @extend %body-font
+            margin-bottom: 14px
+        ul
+            list-style-type: none
+            padding-left: 0
+            +mobile-sm
+                margin-bottom: 0
+            li
+                line-height: 2.125
+                font-size: 1rem
+            a
+                color: $text-700
+                text-decoration: none
+                span
+                    width: 17px !important
+                    display: inline-block
+                    text-align: center
+                &:hover
+                    text-decoration: none
+                    color: $primary-color
+        a
+            &.arrow-link
+                line-height: 1.57
+                &:hover
+                    color: $primary-color
+    &-list,
+    &-intl-num
+        .accordion
+            @extend %w-100
+            +mobile
+                padding: 15px 0
+                border-bottom: 0.5px solid $text-100
+            &-header
+                @extend %display-flex
+                +justify-content(space-between)
+                +align-items(center)
+                cursor: pointer
+                @extend %relative
+                h6
+                    +mobile
+                        color: $text-600
+                        margin-bottom: 0
+                        line-height: 1
+                span
+                    &.icon
+                        &-toggle
+                            display: none
+                            +transition(transform .3s)
+                            +mobile
+                                display: block
+                                margin-right: 0
+                                background: url('/src/assets/images/footer/arrow-down.svg') no-repeat center
+                                height: 8px
+                                width: 8px
+                            &:after
+                                content: ''
+                                position: absolute
+                                height: 100%
+                                width: 100%
+                                left: 0
+                                top: 0       
+            &-content
+                &.collapse:not(.show)
+                    display: block
+                    +mobile
+                        display: none 
+                ul
+                    +mobile
+                        margin: 16px 0 0
+                a
+                    &.link-arrow
+                        color: $primary-color
+                        &::after
+                            +angle(down, 5px, 5px, 1px, $primary-color)
+                        +mobile
+                            margin-top: 10px
+            &.show
+                h6
+                    +mobile
+                        color: $primary-color
+                .accordion-content
+                    +mobile
+                        display: block
+                .icon
+                    &-toggle
+                        +transform(rotate(180deg))
+    &-intl-num
+        background: rgba(#1A014C, 0.05)
+        padding: 40px 0 25px
+        +tablet
+            padding: 60px 0
+        h6
+            color: $primary-color
+            @extend %medium
+            @extend %body-font
+            margin-bottom: 20px
+            @extend .text-10
+        .accordion
+            &-header
+                +tablet
+                    display: none
+        .list-hz
+            .cc-block
+                @extend %display-flex
+                +align-items(center)
+                +desktop-max
+                    margin-bottom: 20px
+                &__img-wrap
+                    @extend %relative
+                    margin-right: 12px
+                &__img
+                    margin-bottom: 0
+                    +border-radius(50%)
+                    +box-shadow( 0px 4px 8px rgba(0, 0, 0, 0.1))
+                    border: 3px solid $white-color
+                    height: 52px
+                    width: 52px
+                    @extend %overflow
+                    img
+                        @extend %h-100
+                        @extend %w-100
+                        object-fit: cover
+
+                &__text
+                    @extend %medium
+                    color: $text-600
+                    line-height: 1.2
+                    +laptop
+                        line-height: 0.875
+                    &:hover
+                        color: $primary-color
+                &__num
+                    display: inline-block
+                    +border-radius(3px)
+                    width: 26px
+                    padding: 4px
+                    font-size: 0.525rem
+                    line-height: 1.1
+                    @extend %medium
+                    text-align: center
+                    border: 1px solid rgba(16, 0, 58, 0.6)
+                    background: $white-color
+                    +box-shadow(0px 0px 5px rgba(0, 0, 0, 0.1))
+                    @extend %absolute
+                    left: 50%
+                    +transform(translate(-50%,-50%))
+        .divider-img
+            margin: 22px 0
+            +desktop-max
+                margin: 0 0 20px
+            +mobile  
+                display: none
+        .list-vt
+            .cc-list
+                padding-left: 0
+                margin-bottom: 0
+                width: 100%
+                +display-flex 
+                +flex-wrap(wrap)
+                row-gap: 10px
+                +laptop 
+                    row-gap: 0
+                li
+                    display: inline-block
+                    width: 100%
+                    +mobile-sm
+                        width: 50%
+                    +tablet
+                        width: 33.33%
+                    +desktop-mini
+                        width: 25%
+                    +laptop
+                        width: 20%
+                    img
+                        margin: 0 10px 0 0
+                    a
+                        color: rgba($text-700,0.6)
+                        @extend .text-13
+                        line-height: 1.4
+                        +transition(all 0.5s ease)
+                        +display-flex
+                        +align-items(center)
+                        +laptop 
+                            display: block
+                            line-height: 2
+                        &:hover
+                            color: $primary-color
+         
+        .accordion
+            +mobile
+                border-bottom: 0
+            &-header
+                border: 1px solid $primary-color
+                padding: 14px
+                +border-radius(8px)
+                h6
+                    color: $primary-color   
+                span
+                    &.icon
+                        background: url('/src/assets/images/footer/arrow-down-primary.svg') no-repeat center
+                &[aria-expanded="true"]
+                    .icon
+                        +transform(rotate(180deg))
+            &-content
+                ul.cc-list
+                    +mobile
+                        padding-left: 10px
+                    li
+                        +mobile
+                            border-bottom: 1px solid #e8e8e8
+                            padding: 2.5px 0
+    &-country-num
+        padding: 15px 0 20px
+        +desktop-max
+            padding: 20px 0 5px
+        .pn-block
+            +desktop-max
+                margin-bottom: 15px
+            &__title
+                margin-bottom: 5px
+                display: inline-block
+                line-height: 1
+                color: $text-600
+            p
+                span
+                    display: inline-block
+                    margin-right: 2px
+            a
+                display: block
+                color: $text-700
+                &:hover
+                    color: $primary-color
+    &-bottom
+        background: rgba(#1A014C, 0.02)
+        padding: 30px 0
+        &__left
+            +desktop-max
+                text-align: center
+                margin-bottom: 20px
+            figure
+                img
+                    height: 25px
+                    width: 105px
+            p
+                &:first-of-type
+                    margin: 8px 0 10px
+        &__right
+            @extend %display-flex
+            +flex-direction(column)
+            +align-items(center)
+            +tablet
+                +flex-direction(row)
+            +laptop
+                width: 820px
+            .list-grid
+                @extend %display-flex
+                +flex-wrap(wrap)
+                +justify-content(center)
+                margin-bottom: 0
+                +tablet    
+                    max-width: 470px 
+                    +justify-content(flex-start)
+                +laptop
+                    max-width: 635px 
+                li
+                    @extend .text-12
+                    text-align: center
+                    white-space: nowrap
+                    padding: 0 12px  
+                    +tablet
+                        padding: 0
+                        text-align: left
+                        width: 33.33%
+                    &:not(:last-of-type)
+                        margin-bottom: 10px
+                    a
+                        color: $text-700
+                        &:hover
+                            color: $primary-color
+            .socials
+                margin-top: 20px
+                +align-items(center)
+                +tablet 
+                    +align-items(flex-start)
+                    margin-top: 0
+                +desktop-max
+                    +flex-direction(column)
+                span
+                    @extend .text-11
+                    line-height: 1
+                    margin-bottom: 5px
+                    display: block
+                    text-align: center
+                    +tablet
+                        text-align: left
+                &-icon  
+                    @extend %display-flex
+                    margin-bottom: 0
+                    li
+                        &:not(:last-of-type)
+                            margin-right: 14px
+                        img
+                            +transition(all 0.5s ease)
+                        &:hover
+                            img 
+                                transform: scale(1.1)

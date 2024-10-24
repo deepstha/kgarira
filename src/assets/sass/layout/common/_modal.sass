@@ -1,0 +1,47 @@
+.modal
+    &-content
+        background-color: white
+    &-body
+        @extend %relative
+        padding: 1rem
+        .subscribe-modal &
+            padding-bottom: 30px
+            +tablet
+                padding-bottom: 50px 
+            p 
+                @extend .text-center
+            .mb-lg-4, .my-lg-4
+                margin-bottom: 0 !important
+    &-header
+        .subscribe-modal &
+            +justify-content(center)
+
+    &-dialog
+        +transform(translate(0, -30px))
+        +transition(transform 0.2s ease-out)
+        margin-top: .625rem
+    
+    &-custom
+        opacity: 0
+        @extend %absolute
+        right: 0
+        &.show
+            opacity: 1
+            .modal
+                &-dialog
+                    +transform(none)
+        .header &
+            +mobile-sm
+                max-width: 305px
+            +tablet
+                max-width: 21.25rem
+            .btn
+                width: 4.375rem
+                min-width: auto !important
+    &-signup
+        .icon
+            &-sm
+                background: url('../images/svg/icons/icon-info.svg') no-repeat center
+                width: 1.3rem
+                height: 1.3rem
+                background-size: contain

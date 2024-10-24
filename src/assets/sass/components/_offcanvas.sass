@@ -1,0 +1,30 @@
+.offcanvas
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    background: $primary-color
+    z-index: 9999999999
+    width: 80vw
+    padding: 30px 20px
+    +transform(translateX(-100%))
+    +box-shadow(15px 20px 20px rgba($black-color, 0.05))
+    +transition(transform .5s)
+    +mobile-sm
+        width: 300px
+    +desktop-mini
+        display: none
+    &.show
+        +transform(translateX(0))
+    .close
+        color: $white-color
+        font-size: 2rem
+        opacity: 1
+        @extend %regular
+        text-shadow: none
+    &__toggler
+        padding: 8px 0
+        top: 50px
+        margin-bottom: 1rem
+        z-index: 99
+        left: 70px

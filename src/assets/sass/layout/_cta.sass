@@ -1,0 +1,150 @@
+.cta
+    &__wrap
+        @extend %relative
+        @extend %overflow
+        background: #F6F6FC
+        +border-radius(12px)
+        margin-bottom: 30px 
+        +tablet 
+            margin-bottom: 70x
+        +laptop
+            margin-bottom: 100px
+    &__text
+        z-index: 1
+        padding: 30px 20px 0 
+        @extend %relative
+        +mobile-sm
+            padding: 40px 20px 0
+        +tablet-max
+            +display-flex
+            +justify-content(center)
+            +flex-wrap(wrap)
+            text-align: center
+        +tablet
+            max-width: 480px
+            padding: 0 0 0 40px
+        +desktop-mini
+            padding: 0 0 0 80px
+        figure
+            width: 135px
+        h6
+            @extend .text-10
+            color: $text-600
+            line-height: 1.4
+            margin: 1rem 0 2rem
+            @extend %regular
+
+    &__img 
+        padding-top: 17px
+        figure 
+            @extend .display-flex
+            +align-items(end)
+            +justify-content(flex-end)
+            margin-right: 0
+            
+            +laptop
+                margin-right: 67px
+            img 
+                display: inline-block
+                +desktop-max 
+                    max-width: 50%
+                &:nth-child(1)
+                    margin-right: -20px
+                    +desktop-mini
+                        margin-right: -38px    
+    .props-area
+        &--1,
+        &--2,
+        &--3,
+        &--4
+            @extend %absolute
+            +tablet-max 
+                display: none
+        &--1
+            top: 40px
+            left: 0
+            img 
+                width: 46px
+                height: 108px
+        &--2
+            left: 25%
+            bottom: 0
+            img 
+                height: 68px
+                width: 122px
+        &--3
+            right: 45%
+            top: 0
+            img 
+                width: 185px
+                height: 71px
+        &--4 
+            right: 0
+            bottom: 60px
+            img 
+                width: 62px 
+                height: 156px
+    &-left
+        padding: 0 25px 40px 0
+        h5
+            padding-top: 40px
+            border-top: 1px solid rgba(158,153,171,0.3)
+            color: $white-color
+            margin-bottom: 25px
+            line-height: 1.4
+        .btn
+            height: 44px
+            padding: 15px
+            +laptop
+                width: 225px
+                padding: 15px 17px
+    &-contact
+        background: rgba(246, 173, 173, 0.015)
+        border: 1px solid #DADEE1
+        +border-radius(10px)
+        padding: 30px
+        +flex-direction(column)
+        height: 100%
+        +desktop-mini
+            +flex-direction(row)
+            padding: 0
+        +desktop-max
+            width: 100%
+        +fullhd
+            height: 350px
+        &__content
+            padding-bottom: 20px
+            text-align: center
+            +tablet
+                text-align: left
+            +desktop-mini
+                max-width: 184px
+                padding-left: 20px
+            +laptop
+                max-width: 300px
+                padding: 0 0 0 60px
+            h5
+                color: $white-color
+                line-height: 1.88rem
+                @extend %body-font
+                margin-bottom: 30px
+                @extend %regular
+                +desktop-mini
+                    margin-right: -40px
+        &__img
+            +desktop-mini
+                padding: 20px 30px 20px 0
+    &-gradient //for blog single page
+        +gradient(100deg, $primary-color, #90099C)
+        +border-radius(15px)
+        color: $text-200
+        @extend .text-center
+        padding: 30px 20px
+        +desktop-mini
+            padding: 35px 25px
+        &__title 
+            color: $white-color
+            margin-bottom: 10px
+            line-height: 1.44
+        &__text 
+            line-height: 1.5

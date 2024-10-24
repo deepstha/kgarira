@@ -1,0 +1,586 @@
+@import '../utils/all'
+@import 'typography'
+@import 'reset'
+
+*:focus 
+    outline: none
+
+
+// margin/padding
+.p
+    &-2
+        padding: 15px
+    &-3
+        padding: 30px
+    &-80
+        padding: 80px 0
+    &-100
+        padding: 100px 0
+    &-120
+        padding: 120px 0
+    &y
+        &-100
+            padding: 50px 0 !important
+            +desktop
+                padding: 70px 0 60px !important
+            +fullhd
+                padding: 100px 0 100px !important
+        &-40
+            padding: 25px 0 !important
+            +desktop
+                padding: 40px 0 !important
+        &-50
+            padding: 25px 0 !important
+            +desktop
+                padding: 50px 0 !important
+
+        &-80
+            padding: 40px 0 !important
+            +desktop
+                padding: 80px 0 !important
+    &t
+        &-lg
+            &-0
+                padding-top: 60px !important
+                +fullhd
+                    padding-top: 0 !important
+    &b-0, &y-0
+        padding-bottom: 0 !important
+
+.row
+    &.g
+        &-2
+            margin-left: -25px
+            margin-right: -25px
+            & >
+                *
+                    padding: 0 25px
+
+.m
+    &l
+        &-6
+            margin-left: 4.2rem !important
+    //margin-right
+    &-r
+        &-2
+            margin-right: 10px
+        &-3
+            margin-right: 20px
+        &-5
+            margin-right: 40px
+    &-b
+        &-5
+            margin-bottom: 40px
+    &t
+        &--60
+            +desktop
+                margin-top: -60px !important
+
+/*custom classes for spacing*/
+.pr
+    &-61
+        +laptop 
+            padding-right: 61px
+.pl
+    &-44
+        +fullhd 
+            padding-left: 44px
+//font style
+h1,h2, p
+    & ~
+        table
+            margin-top: 20px
+        p
+            // margin-bottom: 2.8rem
+.dot
+    // &::after
+    //     content: "."
+    span
+        &:not(:last-child)
+            &::after
+                content: "."
+                margin: 0 5px
+                position: relative
+                top: -3px
+                font-weight: bold
+                opacity: 0.7
+
+//overflow
+.overflow
+    overflow: hidden
+    &-initial
+        overflow: initial
+.v
+    &h-100
+        height: 100vh
+
+// width
+.w
+    &-100
+        width: 100%
+    &-mx
+        max-width: 100% !important
+
+//background color
+[class*="bg-"]
+    color: $white-color
+    background-color: $text-200
+.bg
+    &-primary
+        &-dark
+            background-color: $primary-900
+            color: $white-color
+            @extend %relative
+            p
+                opacity: 0.5
+        &-800 
+            background-color: $primary-800
+    &-gray
+        background-color: rgba(#F3EFF7,0.7)
+        color: $text-700
+//border radius
+.border
+    &-r
+        &-50
+            +border-radius(50px)
+        &-15
+            +border-radius(15px)
+            img
+                +border-radius(15px)
+        &-20
+            +border-radius(20px)
+            img
+                +border-radius(20px)
+        &-10
+            +border-radius(10px)
+            img
+                +border-radius(10px)
+        &-8
+            +border-radius(8px)
+        &-4
+            +border-radius(4px)
+        &-l
+            +border-radius(1.25rem 0 0 1.25rem)
+
+    &-soft
+        border-color: $border-color !important
+    &-outline
+        &-primary
+            border-color: $primary-color !important
+            border-width: 1px
+            border-style: solid
+    &-none
+        border: none
+.bg
+    &-white
+        background-color: rgba($white-color , 1) !important
+    &-light
+        background-color: rgba($text-100, 1) !important
+        &-gradient
+            // +gradient(45deg, #015d46, #3a6782)
+            // +gradient(45deg, #0c0e0d, #334b6f)
+            // linear-gradient(45deg, #0c0e0d, #334b6f)
+            // linear-gradient(45deg, #1b3640, #80281a) second option
+    &-primary
+        background-color: rgba($primary-color , 1) !important
+        &-50
+            background-color: rgba($primary-50 , 1) !important
+    &-info
+        background-color: $info-default !important
+    //&-success
+        background-color: rgba($success-color , 1) !important
+    //&-warning
+        background-color: rgba($warning-color, 1) !important
+    &-fixed
+        background-attachment: fixed
+    &-light, &-white
+        color: $black-color
+
+//item link
+.link
+    &-item
+        color: $primary-color
+        opacity: 1
+        display: block
+        &:hover
+            color: $primary-color !important
+            opacity: 0.9
+            .text-1, .text-2, .text-3
+                color: $primary-color
+            & ~
+                figure
+                    background-color: rgba($black-color, 0.5)
+                    img
+                        opacity: 0.7
+        &::after
+            content: ""
+            position: absolute
+            height: 100%
+            width: 100%
+            top: 0
+            left: 0
+        .icon
+            &-arrow
+                &-right
+                    &::before
+                        display: none
+                    svg
+                        +tablet-max
+                            width: 9px
+        &.icon-link
+            +transition(all .3s)
+            &:hover
+                margin-right: 5px
+    &-text
+        color: $primary-color
+        // display: block
+        .icon
+            &-arrow
+                &-right
+                    left: 0
+                    top: 1px
+                    @extend %relative
+                    +transition(all 0.1s linear)
+                    margin-left: 10px !important
+                    +desktop
+                        top: 0
+                    +fullhd
+                        margin-left: 12px !important
+
+        &:hover
+            color: $primary-700
+            .icon
+                &-arrow
+                    &-right
+                        left: -3px
+                        svg
+                            path
+                                fill: $primary-700
+    &-arrow
+        line-height: 1.1
+        +display-inline-flex 
+        @extend .text-12
+        @extend %relative
+        color: $info-default
+        margin-top: 4px
+        align-self: flex-start
+        padding-right: .5625rem
+        &:hover
+            color: $primary-color
+        &:after
+            @extend %content
+            top: 5px
+            left: auto
+            right: 0
+            +transition(all 0.2s linear)
+            +transform(rotate(135deg))
+            +angle(down, 5px, 5px, 1px, $info-default)
+            &:hover
+                +angle(down, 5px, 5px, 1px, $primary-color)
+    &:hover
+        &:after
+            margin-left: 7px
+    &-active
+        color: inherit
+        //.fa, .fas, .far
+        color: $success-color
+    &-disabled
+        color: rgba($text-300, 0.65)
+
+
+
+//list style
+.list
+    &-style
+        padding-left: 0px
+        &-text
+            & >
+                div, li
+                    &:not(:last-child)
+                        margin-bottom: 5px !important
+    li, *:not(dt)	
+        // display: inline-block	
+        margin-bottom: 1.7rem	
+        list-style: none	
+        padding-left: 0
+    &-items
+        &:not(:last-child)
+            margin-bottom: 17px
+            
+.data
+    &-item
+        +display-flex
+        +justify-content(space-between)
+        max-width: 12.0625rem
+    &-col
+        +flex-grow(1)
+        &-auto
+            +flex(0, 0, auto)
+// block
+.d
+    &-inline
+        &-block
+            figure
+                display: inline-block
+    //display-grid
+    &-grid
+        +display-grid
+        // grid-auto-rows: 12.5rem
+        gap: 1.5rem 1rem
+        &-3
+            grid-template-columns: repeat(3, 1fr)
+        &-4
+            grid-template-columns: repeat(4, 1fr)
+
+//inline block
+.i-block
+    +display-flex
+    +align-items(center)
+    &__content
+        span
+            display: block
+.block
+    &-relative
+        @extend %relative
+    &-absolute
+        @extend %absolute
+        &--center
+            @extend %absolute
+            height: auto
+            +transform(translate(-50%))
+            left: 50%
+        &--right
+            @extend .overlay
+            background-color: transparent
+            left: auto
+            right: 0
+            width: auto
+            padding: 0 18px
+            &-tp
+                left: auto
+                right: 0px
+                top: 0
+        &--bottom
+            @extend %absolute
+            top: auto
+            bottom: 15px
+            &-center
+                height: auto
+                +transform(translate(-50%))
+                left: 50%
+                top: auto
+                bottom: 30px
+                width: 100%
+                +fullhd
+                    bottom: 45px
+            &-right
+                top: auto
+                bottom: 0
+                right: 0
+                left: auto
+        &--topLeft
+            @extend %absolute
+            left: -0.625rem
+            top: -0.3125rem
+        &--topRight
+            @extend %absolute
+            left: auto
+            right: -40px
+            max-width: 600px
+            top: -131px
+            opacity: 0.2
+
+    &-center
+        text-align: center
+        margin: 0 auto 20px
+        &--max
+            +fullhd
+                max-width: 500px !important
+.btmFloat
+    top: auto
+    bottom: -4rem
+a
+    color: $primary-color
+    &:hover
+        text-decoration: none
+        color: $primary-900
+
+section + section
+    padding: 40px 0
+    +tablet
+        padding: 70px 0
+    +desktop-mini
+        padding: 120px 0
+
+
+//close button
+.close
+    @extend %relative
+    z-index: 1
+    &--top
+        top: -1.25rem
+        right: 8px
+// arrow down
+.arrow
+    &-down
+        @extend %relative
+        width: 16px
+        &::after
+            @extend %content
+            top: 5px
+            left: 5px
+            +transition(all 0.2s linear)
+            +transform(rotate(225deg))
+            +angle(down, 5px, 5px, 1px, $text-700)
+    &-right
+        @extend %relative
+        width: 16px
+        &::after
+            @extend %content
+            top: 9px
+            left: 7px
+            +transition(all 0.2s linear)
+            +transform(rotate(135deg))
+            +angle(down, 6px, 6px, 1px, $text-700)
+    &-fill
+        &-right
+            +caret(right, 12px, 10px, $primary-color)
+            // caret($direction, $width, $height, $color)
+
+.s-8
+    margin: 0 -8px 0 -8px
+    padding: 0
+    @extend %display-flex
+    +mobile-sm-max
+        flex-wrap: wrap
+    li
+        padding: 0 8px 0 8px
+        +mobile-sm-max
+            margin-bottom: 20px
+            width: 100%
+a
+    &.link-arrow
+        line-height: 1
+        +display-inline-flex 
+        @extend .text-12
+        @extend %relative
+        padding-right: .5625rem
+        &:after
+            @extend %content
+            top: 5px
+            left: auto
+            right: 0
+            +transition(all 0.2s linear)
+            +transform(rotate(135deg))
+            +angle(down, 5px, 5px, 1px, $primary-color)
+        &:hover
+            &:after
+                margin-left: 7px
+
+.mx-diff
+    mix-blend-mode: difference
+
+.bkg-overlay
+    background-color: $gray-dark
+    opacity: 0.5
+    mix-blend-mode: multiply
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100%
+    z-index: 5
+    animation: fadeSlow .7s 
+    +desktop-max
+        display: none
+
+.triangle 
+    position: relative
+    z-index: 1
+
+    &::before 
+        content: ""
+        width: 16px
+        height: 16px
+        display: block
+        position: absolute
+        border-right: 1px solid transparent
+        border-left: 1px solid #E0DFE7
+        border-top: 1px solid #E0DFE7
+        border-bottom: 1px solid transparent
+        transform: rotate(45deg) skew(10deg,10deg)
+        left: -1px
+        bottom: -9px
+        background-color: #FBF9FC
+        
+.disabled-link
+    pointer-events: none
+
+.play-btn
+    @extend .absolute-center
+    cursor: pointer
+    span
+        height: 50px
+        width: 50px
+        background-color: $white-color
+        +border-radius(50%)
+        @extend .item-center
+        .searchList__items &
+            height: 30px
+            width: 30px
+        &:before
+            @extend %content
+            @extend %absolute
+            background-color: rgba(255, 255, 255, 0.30)
+            height: 65px
+            width: 65px
+            z-index: -1
+            +border-radius(50%)
+            .searchList__items &
+                height: 40px
+                width: 40px
+
+//description list
+dl
+    text-align: left
+    dt
+        & + dd
+            margin-top: 0.9375rem
+    dd
+        & + dt
+            margin-top: 1.25rem
+            +tablet
+                margin-top: 1.875rem
+    dd
+        padding-left: 1.25rem
+        margin-bottom: 0
+
+//flex
+.flex
+    &-between
+        @extend %display-flex
+        +justify-content(space-between)
+    &-wrap
+        +flex-flow(wrap)
+
+//position static
+.static
+    position: static
+
+.video-wrapper
+    @extend %relative
+
+//hide element after small tablet size
+.xs
+    &-hidden
+        +tablet-sm-max  
+            display: none
+
+//hide scrollbar
+.hide
+    &-scroll
+        +tablet
+            max-height: 100vh
+        .simplebar-track
+            display: none
+

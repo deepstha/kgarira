@@ -1,0 +1,162 @@
+.form
+    &-control
+        color: $text-500
+        min-height: 44px
+        font-size: 1rem
+        line-height: 1
+        background-color: $primary-50
+        border: none
+        outline: 0
+        +border-radius(5px)
+        padding: 10px 16px
+        @extend %regular
+        @extend %body-font
+        box-shadow: none
+        +placeholder-color($text-400)
+        &:focus
+            box-shadow: none
+            border-color: $primary-color
+            background-color: #F5F5F5
+        & ~ .invalid
+            color: $success-color
+        .form-search &
+            border: 1px solid $primary-200
+            padding: 15px 15px 15px 42px
+            background: $primary-50 !important
+            min-height: 40px
+        .form-search--lg &
+            padding: 10px 44px 10px 55px
+            input
+                +border-radius(10px)
+                min-height: 3.75rem
+        
+
+        &.mh-45
+            height: 45px
+            min-height: 45px
+    &-group
+        margin-bottom: 24px
+        label
+            color: $text-700
+            @extend %body-font
+            font-size: 0.875rem
+            line-height: 1
+            @extend %regular
+            margin-bottom: 6px
+            @extend %body-font
+            span
+                color: $danger
+            
+    &-iconwrap
+        @extend %relative
+    &-icon
+        position: absolute
+        left: 15px
+        top: 50%
+        transform: translateY(-40%)
+        @extend .display-inline-flex
+    &-search
+        @extend %relative
+        &:before
+            @extend %absolute
+            @extend %content
+            background: url('../images/svg/icons/icon-search.svg') no-repeat center
+            height: 16px
+            width: 16px
+            top: 50%
+            left: 16px
+            +transform(translateY(-50%))
+
+        &--lg
+            &::before
+                left: 1.5625rem
+    &-heading
+        margin-bottom: 20px
+        +mobile
+            text-align: center
+    &-ccwrapper
+        height: 2.75rem
+        input
+            display: none
+
+.input
+    &-dark
+        padding: .9375rem 2.8125rem .9375rem
+        background-color: $input-dark-bg !important
+        border-color: $text-500
+        color: $white-color
+        max-width: 210px
+        min-height: 48px
+        +laptop
+            max-width: 340px
+        &:focus
+            color: $white-color
+            background-color: $input-dark-bg
+    &-group
+        &-text
+            background-color: #F2EDF6
+            border: 0
+            border-right: 1px solid rgba(57, 1, 121, 0.15)
+            @extend .text-small
+            color: inherit
+            @extend %bold
+            padding: 5px 15px
+        .form-control
+            min-height: 36px
+            background: $white-color
+            @extend .text-small
+            color: inherit
+            @extend %regular
+            padding: 6px 10px
+        &-icon
+            .icon
+                float: right
+                margin: 10px 8px 10px 0
+
+textarea
+    &.form-control
+        resize: none !important
+        line-height: 22px
+        min-height: 130px
+        max-height: 165px
+
+//Custom select
+.custom-select
+    background-image: url('/src/assets/images/svg/icons/arrow-down.svg')
+    background-repeat: no-repeat
+    background-position-x: 95%
+    background-position-y: center
+    background-size: 12px 5px
+    padding: 6px 18px
+
+.drop
+    &-file
+        border: 1px dashed $primary-200
+        +border-radius(6px)
+        background-color: $primary-50
+        @extend %relative
+        min-height: 112px
+        &:before
+            content: ''
+            position: absolute
+            background-color: $primary-50
+            background-image: url('/src/assets/images/form-upload.png')
+            background-repeat: no-repeat
+            background-position: 12% 50%
+            padding: 15px 
+            pointer-events: none
+            @extend %h-100
+            @extend %w-100
+        input
+            opacity: 0
+            @extend %h-100
+            @extend %w-100
+            min-height: 112px
+    &-text
+        @extend .text-center
+        @extend .absolute-center
+        width: 100%
+        color: $text-400
+        line-height: 1.5
+        font-size: 1rem
+        cursor: pointer

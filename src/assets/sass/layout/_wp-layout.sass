@@ -1,0 +1,324 @@
+
+dfn, cite, em, i 
+	font-style: italic
+
+
+blockquote, q 
+	margin: 1.5em 1em
+	font-family: 'Abhaya Libre', serif
+	font-size: 1.333em
+	text-align: center
+	font-weight: 700
+	color: #000
+
+
+q 
+	border-left: 3px solid rgba(0,0,0,0.1)
+	padding-left: 30px
+	text-align: left
+	width: 50%
+	margin: 0
+	float: left
+	display: block
+
+
+q:before, q:after 
+	display: none
+
+
+blockquote span, q span 
+	display: inline-block
+	font-family: 'Nunito Sans', sans-serif
+	font-size: 18px
+	font-weight: 400
+	color: #333
+
+
+address 
+	margin: 0 0 1.5em
+
+
+pre 
+	background: #eee
+	font-family: "Courier 10 Pitch", Courier, monospace
+	font-size: 15px
+	font-size: 0.9375rem
+	line-height: 1.6
+	margin-bottom: 1.6em
+	max-width: 100%
+	overflow: auto
+	padding: 1.6em
+
+
+code, kbd, tt, var 
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace
+	font-size: 15px
+	font-size: 0.9375rem
+
+
+abbr, acronym 
+	border-bottom: 1px dotted #666
+	cursor: help
+
+
+mark, ins 
+	background: #fff9c0
+	text-decoration: none
+
+
+big 
+	font-size: 125%
+
+
+/*--------------------------------------------------------------*/
+//  Accessibility
+// --------------------------------------------------------------
+/* Text meant only for screen readers. */
+.screen-reader-text 
+	border: 0
+	clip: rect(1px, 1px, 1px, 1px)
+	clip-path: inset(50%)
+	height: 1px
+	margin: -1px
+	overflow: hidden
+	padding: 0
+	position: absolute !important
+	width: 1px
+	word-wrap: normal !important /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+
+.screen-reader-text:focus 
+	background-color: #f1f1f1
+	border-radius: 3px
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6)
+	clip: auto !important
+	clip-path: none
+	color: #21759b
+	display: block
+	font-size: 14px
+	font-size: 0.875rem
+	font-weight: bold
+	height: auto
+	left: 5px
+	line-height: normal
+	padding: 15px 23px 14px
+	text-decoration: none
+	top: 5px
+	width: auto
+	z-index: 100000
+	/* Above WP toolbar. */
+
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus 
+	outline: 0
+
+
+/*--------------------------------------------------------------
+// # Alignments
+// --------------------------------------------------------------*/
+.alignleft 
+	display: inline
+	float: left
+	margin-right: 1em
+
+
+.alignright 
+	display: inline
+	float: right
+	margin-left: 1em
+
+
+.aligncenter 
+	clear: both
+	display: block
+	margin-left: auto
+	margin-right: auto
+
+
+/*--------------------------------------------------------------
+// # Clearings
+// --------------------------------------------------------------*/
+.clearfix:before,
+.clearfix:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after,
+.container:before, 
+.container:after 
+	content: ""
+	display: table
+	table-layout: fixed
+
+
+.clearfix:after,
+.entry-content:after,
+.comment-content:after,
+.site-content:after,
+.site-footer:after, 
+.container:after 
+	clear: both
+
+
+/*--------------------------------------------------------------
+// # Widgets
+// --------------------------------------------------------------*/
+.widget 
+	margin: 0 0 65px 0
+	/* Make sure select elements fit in widgets. */
+
+
+.widget:last-child 
+	margin-bottom: 0
+
+
+.widget select 
+	max-width: 100%
+
+
+/*--------------------------------------------------------------
+// # Content
+// --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+// ## Posts and pages
+// --------------------------------------------------------------*/
+.sticky 
+	display: block
+
+
+.hentry 
+	margin: 0 0 1.5em
+
+
+.updated:not(.published) 
+	display: none
+
+
+.page-content,
+.entry-content,
+.entry-summary 
+	margin: 1.5em 0 0
+
+
+.page-links 
+	clear: both
+	margin: 0 0 1.5em
+
+
+/*--------------------------------------------------------------
+// ## Comments
+// --------------------------------------------------------------*/
+.comment-content a 
+	word-wrap: break-word
+
+
+.bypostauthor 
+	display: block
+
+
+/*--------------------------------------------------------------
+// # Infinite scroll
+// --------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer 
+	/* Theme Footer (when set to scrolling) */
+	display: none
+
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer 
+	display: block
+
+
+/*--------------------------------------------------------------
+// # Media
+// --------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley 
+	border: none
+	margin-bottom: 0
+	margin-top: 0
+	padding: 0
+
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object 
+	max-width: 100%
+
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link 
+	display: inline-block
+
+
+/*--------------------------------------------------------------
+// ## Captions
+// --------------------------------------------------------------*/
+.wp-caption 
+	margin-bottom: 1em
+	max-width: 100%
+
+
+.wp-caption img[class*="wp-image-"] 
+	display: block
+	margin-left: auto
+	margin-right: auto
+
+
+.wp-caption .wp-caption-text 
+	margin: 0.8075em 0
+
+
+.wp-caption-text 
+	text-align: center
+	font-size: 14px
+	color: #878787
+
+ 
+.wpcf7-spam-blocked 
+	background: #e2e2e2
+	border: 1px solid #bcbcbc !important
+	color: #383838
+
+
+.wpcf7-mail-sent-ng 
+	background: #fcf8e3
+	border: 1px solid #ac9163 !important
+	color: #8a6d3b
+
+
+.wpcf7-mail-sent-ok 
+	background: #dff0d8
+	border: 1px solid #3c763d !important
+	color: #3c763d
+
+.wpcf7 form .wpcf7-response-output 
+	margin: 1em 0.5em
+
+div.wpcf7-validation-errors 
+	display: none !important
+
+ 
+div.wpcf7-validation-errors 
+	background: #ffe2e2
+	border: 1px solid #ff0000
+	color: #C10000
+
+
+div.wpcf7-response-output 
+	margin: 2em 0
+	padding: 15px
+	border-radius: 5px
+	box-sizing: border-box
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box	
+

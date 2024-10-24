@@ -1,0 +1,131 @@
+.no-results 
+    @extend .text-center
+    padding: 30px 0 50px
+    +tablet 
+        padding: 40px 0 70px 0
+    +desktop-mini
+        padding: 63px 0 100px
+    &__content
+        font-size: 1rem
+        +tablet
+            font-size: 1.38rem
+    h1 
+        line-height: 1.17
+        letter-spacing: 1px
+        color: $text-900
+        font-size: 2rem
+        margin-bottom: 15px
+        +tablet
+            margin-bottom: 30px
+            font-size: 2.38rem
+        +desktop-mini
+            font-size: 3rem
+    p 
+        color: $text-900
+    
+    form 
+        width: 100%
+        margin: 20px 0
+        +tablet
+            max-width: 640px
+            margin: 50px auto
+        +desktop-mini
+            margin: 70px auto 
+
+.search
+    &-post 
+        padding: 30px 0 50px
+        +tablet
+            padding: 40px 0 70px 0
+        +desktop
+            padding: 60px 0 120px
+        .post
+            &-count 
+                strong 
+                    padding-right: 5px
+            &-link 
+                padding-bottom: 20px
+                @extend .text-11
+                color: $text-800
+                display: inline-block
+                &:hover
+                    color: $primary-color
+    &__items
+        figure 
+            max-width: 100%
+            max-height: 100%
+        .blog-list__item
+            &__content
+                padding-left: 10px
+    &-info 
+        padding-bottom: 30px
+        +desktop-mini
+            padding-bottom: 60px
+        h6
+            color: $text-600
+            margin-bottom: 15px
+            span
+                color: $text-800
+                @extend %bold
+        p 
+            color: $text-800
+
+    &__items 
+        p 
+            margin-bottom: 10px
+    .cta-gradient 
+        margin-bottom: 30px 
+        +tablet 
+            margin-bottom: 50px         
+.category-content,
+.search-content
+    .pagination
+        +justify-content(center)
+        .prev,
+        .next 
+            font-size: 0
+            @extend %relative
+        +desktop-max 
+            margin-bottom: 40px
+        +mobile
+            margin-bottom: 30px
+        .prev
+            &:before 
+                @extend %content
+                @extend %absolute
+                background: url(../images/knowledge-base/icon-caret-left.svg) no-repeat center
+                height: 20px
+                width: 20px
+                top: -15px
+                left: -5px
+        .next
+            &:after 
+                @extend %content
+                @extend %absolute
+                background: url(../images/knowledge-base/icon-caret-right.svg) no-repeat center
+                height: 20px
+                width: 20px
+                top: -15px
+                right: -5px
+
+        .page-numbers 
+            padding: 0 10px
+            text-align: center
+            color: $text-700
+            &:hover 
+                color: $primary-color
+        .nav-links 
+            width: 100%
+            text-align: center
+.category
+    &-post 
+        padding: 30px 0 50px
+        +tablet
+            padding: 40px 0 70px 0
+        +desktop
+            padding: 60px 0 120px
+    &-content
+        h6 
+            margin-bottom: 30px
+            +tablet
+                margin-bottom: 40px

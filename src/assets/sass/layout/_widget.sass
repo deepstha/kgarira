@@ -1,0 +1,37 @@
+.widget
+    list-style-type: none
+    margin-top: 30px
+    +tablet
+        margin-top: 50px
+    &title
+        @extend .heading__title
+        @extend .heading__title--sideborder
+    ul
+        padding: 0 0 0 15px
+        line-height: inherit
+        margin-bottom: 0
+        li 
+            list-style: disc
+            @extend .text-10 
+            @extend .text-smbold 
+            line-height: 2.1em
+            @extend %body-font
+            a
+                @extend .text-900
+                &:hover
+                    color: $primary-color
+        
+    &.widget_categories
+        ul 
+            padding: 0
+            li 
+                list-style: none 
+                @extend .display-flex 
+                +justify-content(space-between)
+                color: $text-700 
+                padding: 5px 0
+                &:not(:last-child)
+                    border-bottom: 1px solid $text-100
+                    margin-bottom: 10px
+                a 
+                    color: $text-700 

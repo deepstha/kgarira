@@ -1,0 +1,373 @@
+.hero
+    &-panel
+        height: auto
+        position: relative
+        +bg-gradient(180deg, $primary-100, 0%, $primary-100-gradient, 100%)
+        &__section
+            @extend .text-center
+        &__content
+            padding: 2.67rem 0 1.8rem
+            max-width: 40.3125rem
+            margin: 0 auto
+            +tablet
+                padding: 3rem 0 2.2rem
+            +fullhd
+                padding: 3.8125rem 0
+            h1, .text-1
+                @extend .text-lt
+                font-size: 1.8rem
+                line-height: 1.125
+                +mobile-sm
+                    font-size: 2.4rem
+                +fullhd
+                    font-size: 3rem
+            p
+                font-size: 1.125rem
+                line-height: 1.6
+                +fullhd
+                    margin: 30px 0
+
+        &__img
+            @extend %relative
+            .block-relative
+                width: 100%
+            .img
+                &-main
+                    margin-bottom: 32px
+                    filter: drop-shadow(0px 0px 25px rgba(57, 1, 121, 0.12))
+                    +mobile
+                        height: 100%
+                        width: 75%
+                    +desktop-max
+                        margin-bottom: 12px
+                    img
+                        min-width: 100%
+                        +border-radius(0px)
+                        +tablet
+                            max-width: 77%
+                            min-width: auto
+                        +laptop
+                            min-width: 44.5625rem
+                            max-width: 100%
+                            +border-radius(15px)
+                        +fullhd
+                            min-width: 48.5625rem
+
+            .props
+                &-area
+                    @extend .overlay
+                &-4
+                    position: relative
+                    min-width: 110%
+                    top: 16px
+                    left: 3%
+                    +mobile-sm
+                        top: 20px
+                    +tablet
+                        top: 10%
+                        left: 6%
+                    +desktop-mini
+                        min-width: 96.50%
+                        left: 9.18%
+                        top: 7.8%
+                    +laptop
+                        top: 13%
+                    +fullhd
+                        min-width: 105%
+                        left: 7%
+                        top: -8px
+
+        &.features
+            max-width: 36.8125rem
+
+        //brand slider
+        &__slider
+            @extend %relative
+            padding: 40px 0
+            background-color: rgba($primary-900, 0.05)
+            +tablet
+                padding: 59px 0 68px 0
+            h6, .text-6
+                color: $text-500
+                margin-bottom: 1.875rem
+                @extend %semi-bold
+                line-height: 1
+                +mobile-sm-max
+                    padding: 0 15px
+    &-md  
+        @extend .display-flex
+        +align-items(center)
+        +desktop-mini
+            min-height: 27.63rem
+            height: 31.25rem
+        +laptop
+            height: 38.75rem
+        &__content
+            padding: 40px 0 0
+            text-align: center
+            +tablet
+                padding: 70px 0 0
+            +desktop-mini
+                padding: 0
+                text-align: left
+            &.mw-542
+                +desktop-mini
+                    max-width: 542px
+            .btn-wrap
+                @extend .display-flex
+                +justify-content(center)
+                +mobile-sm-max
+                    +flex-wrap(wrap)
+                +desktop-mini
+                    +justify-content(left)
+                .btn + .btn
+                    margin-left: 20px
+                    +mobile-sm-max
+                        margin-left: 0
+                    +laptop
+                        margin-left: 24px
+        &.integration-hero
+            padding: 40px 0
+            +tablet
+                padding: 70px 0 50px
+            +desktop-mini
+                padding: 0
+        &__title
+            line-height: 1.125
+            color: $text-900
+            @extend %semi-bold
+            margin-bottom: 0.9375rem
+        &__text
+            margin-bottom: 1rem
+            line-height: 1.4
+            display: block
+            @extend .text-md
+            @extend .text-600
+            @extend %body-font
+            +desktop-mini
+                margin-bottom: 1.4rem
+        &__info
+            margin-bottom: 1.6rem
+            +desktop-mini
+                margin-bottom: 2rem
+            +laptop
+                margin-bottom: 60px
+            .hero-faq &
+                @extend .text-9
+                line-height: 1.78
+                +laptop
+                    padding-right: 50px
+        &__img 
+            .hero-integrations &
+                width: 80%
+                +tablet
+                    width: 55%
+                +desktop-mini
+                    width: 100%
+                    max-width: 584px
+                    margin-left: auto
+                +desktop-max
+                    padding: 30px 0 70px
+                    margin: 0 auto
+                +mobile-sm-max
+                    padding-bottom: 40px
+            figure
+                .hero-integrations &
+                    @extend %relative
+                    +laptop
+                        right: 27px
+    &-sm
+        padding: 40px 0
+        @extend %overflow
+        @extend .display-flex
+        +align-items(center)
+        +tablet
+            padding: 70px 0
+        +desktop-mini
+            padding: 100px 0
+        +laptop
+            height: 449px
+            padding-top: 115px
+        +fullhd
+            display: block
+        &__content
+            +desktop-max
+                text-align: center
+            h1
+                color: $text-700
+                @extend %regular
+                margin-bottom: 1.1rem
+                .theme-light &
+                    margin-bottom: 1.5rem
+            p
+                @extend %body-font
+                color: $text-600
+                margin-bottom: 1.6rem
+                line-height: 1.4
+                @extend .text-md
+                +desktop-mini
+                    margin-bottom: 2rem
+                +laptop
+                    margin-bottom: 2.5rem
+                    max-width: 71%
+                    margin-left: auto
+                    margin-right: auto
+                .hero-compare & 
+                    +tablet
+                        margin: 0.875rem auto 2.5rem
+                .hero-blogs &
+                    max-width: 100%
+            &-leftAlign
+                p
+                    max-width: 100%
+                    margin-left: 0
+                    margin-right: 0
+            .btn-wrap
+                @extend .display-flex
+                +justify-content(center)
+                +align-items(center)
+                +mobile-sm-max
+                    +flex-direction(column)
+                .btn + .btn
+                    +tablet
+                        margin-left: 40px
+                .inner-page__date
+                    margin: 0 0 20px 0
+                    +mobile-sm
+                        margin: 0 62px 0 0
+    &-overlay
+        @extend %relative  
+        &:before
+            @extend %absolute
+            @extend %content
+            +bg-gradient(180deg, $primary-100, 0%, $primary-100-gradient, 100%)
+            top: 0
+            height: 73%
+            width: 100%
+            opacity: 0.4
+        &:not(.hero-cloud):not(.hero-phone):not(.hero-widget):not(.hero-download):not(.pricing-hero):not(.case-inner)
+            &:before
+                opacity: 0.8
+    &-bg
+        background-color: #F8F6FA
+        &-dark
+            @extend .bg-primary-800 
+            h1 
+                color: $white-color
+                font-weight: 700 !important
+
+    &-blogs
+        padding: 40px 0
+        +desktop-mini
+            padding-top: 62px
+        +laptop
+            padding-bottom: 100px
+
+        &__img
+            width: 1000%
+            +mobile-sm
+                width: 60%
+            +desktop-mini
+                width: 100%
+            +desktop-max 
+                margin: 0 auto
+        &-single
+            height: auto
+            padding: 1.875rem 0 .3125rem
+            +tablet
+                padding: 3.125rem 0 1.25rem
+            +desktop-mini 
+                padding: 4.375rem 0
+                .theme-light &
+                    padding: 3rem 0
+            .row 
+                +desktop-max 
+                    +flex-direction(column-reverse)
+            &__content 
+                +tablet-max
+                    text-align: left
+                +laptop
+                    max-width: 535px
+                h1 
+                    +mobile-sm-max 
+                        font-size: 1.5rem
+            &__info 
+                padding: 0
+                margin: 30px 0 0
+                @extend .display-flex
+                color: $text-200
+                font-size: 12px
+                line-height: 1
+                @extend %regular
+                row-gap: 15px
+                +tablet-sm
+                    font-size: 13px
+                    line-height: 1.2
+                +tablet 
+                    margin: 50px 0 0
+                +desktop-mini 
+                    margin: 80px 0 0
+                +desktop
+                    +flex-wrap(wrap)
+                    +justify-content(space-between)
+                    line-height: 1.3
+                li 
+                    @extend .display-flex 
+                    +align-items(center)
+                    &:not(:last-child)
+                        margin-right: .8rem
+                        
+                        +tablet-max
+                            margin-right: 3.125rem
+                        +mobile
+                            margin-right: 1.25rem
+                        +mobile-sm-max
+                            margin-right: .5rem
+
+                    span
+                        &.icon
+                            img
+                                margin-right: .0625rem
+                                +mobile-sm
+                                    margin-right: .2rem
+                                +tablet-sm
+                                    margin-right: .5rem
+                                +mobile
+                                    height: .875rem
+
+            &__img
+                +desktop-max 
+                    margin-bottom: 30px
+                figure
+                    & >
+                        img, div
+                            width: 100%
+                            +border-radius(8px)
+                            margin-top: 1.5625rem
+                            overflow: hidden
+    &-knowledge
+        padding: 45px 0 0
+        +tablet
+            padding: 70px 0 0 
+        +desktop-mini
+            padding: 0
+        +laptop
+            padding: 100px 0 115px
+        +fullhd
+            padding-top: 0
+        &__content
+            +desktop-max
+                text-align: center
+        &__img
+            figure
+                width: 80%
+                +mobile-sm 
+                    width: 55%
+                +desktop-mini
+                    width: 100%
+                +laptop
+                    margin-top: 40px
+                +fullhd
+                    margin-top: -8px
+                +desktop-max 
+                    margin: 0 auto

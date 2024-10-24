@@ -1,0 +1,89 @@
+.error
+    &-wrapper
+        @extend .text-center
+        +display-flex 
+        +justify-content(center)
+        +align-items(cenetr)
+        +flex-wrap(wrap)
+        +flex-direction(column)
+        padding: 30px 0 50px 
+        +tablet
+            padding: 40px 0 70px 0
+        +desktop-mini
+            padding: 63px 0 100px
+        .btn-wrap
+            padding-top: 40px
+    &-content
+        background-color: rgba($primary-color,0.05)
+        +border-radius(50%)
+        display: inline-block
+        width: 250px
+        height: 250px
+        +tablet
+            width: 320px
+            height: 320px
+        +desktop-mini
+            width: 380px
+            height: 380px
+        +laptop
+            width: 467px
+            height: 467px
+        h1 
+            line-height: 1  
+            color: $primary-color
+            @extend %bold 
+            padding-top: 30px
+            font-size: 2.81rem
+            +tablet
+                font-size: 3.75rem
+            +desktop-mini
+                padding-top: 70px
+                font-size: 4.5rem
+            +laptop 
+                padding-top: 100px
+                font-size: 6.25rem
+        h2 
+            color: $text-900
+            line-height: 1
+            @extend %bold 
+            font-size: 1.5rem
+            +tablet
+                font-size: 1.75rem
+            +laptop
+                font-size: 2rem
+        p 
+            font-size: 14px
+            color: $text-400
+            @extend %bold
+            @extend %body-font
+            padding: 50px 40px 0
+            +tablet
+                padding: 70px 40px 0
+            +desktop-mini
+                padding: 90px 50px 0
+            +laptop
+                padding: 125px 100px 0
+    &-img 
+        @extend %relative
+        img
+            @extend %absolute
+            width: 130px
+            top: 10px
+            +tablet
+                width: 200px
+            +laptop
+                width: auto
+                top: 15px
+            &:nth-child(1)
+                left: -20px
+                +tablet
+                    left: -50px
+                +laptop
+                    left: -80px
+            &:nth-child(2)
+                right: -20px
+                +tablet
+                    right: -50px
+                +laptop
+                    right: -80px
+

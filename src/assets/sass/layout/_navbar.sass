@@ -1,0 +1,154 @@
+.header
+    @extend %w-100
+    +align-items(center)
+    background-color: $white-color
+    +cubic
+    &.sticky
+        &-header
+            +box-shadow(0 0 24px rgba($black-color, 0.05))
+            .navbar
+                height: 50px
+                +desktop-mini
+                    height: 65px
+                +fullhd
+                    height: 80px
+    .navbar
+        padding: 0
+        height: 60px
+        background-color: #F4F1F8
+        border-bottom: 1px solid #DBE1E5
+        +transition(.2s ease)
+        +desktop-mini
+            height: 60px
+        &-expand-lg
+            +justify-content(space-between)
+  
+        .menu
+            &-list
+                @extend %h-100
+                +desktop-max
+                    overflow-y: auto
+                    overflow-x: hidden
+                    height: 90vh
+                    padding-bottom: 20px
+                +desktop-mini
+                    +display-flex
+                    width: 100%
+                    +align-items(center)
+                    margin-left: 40px
+                +laptop
+                    margin-left: 8.4375rem
+                &::-webkit-scrollbar
+                    +desktop-max
+                        width: 0
+                .nav
+                    &-item
+                        @extend %display-flex
+                        +flex-direction(column)
+                        +desktop-max
+                            //margin-bottom: 10px
+                            border-bottom: 1px solid $text-100
+                            +desktop
+                                margin-bottom: 30px
+                        +desktop-mini
+                            margin-bottom: 0
+                            border: none
+                            +align-items(center)
+                            +flex-direction(row)
+                            +transition(all .3s)
+                    &-link
+                        color: $text-600
+                        padding: 13px 1.2rem
+                        @extend .display-inline-flex
+                        +justify-content(space-between)
+                        line-height: 1
+                        font-size: .9375rem
+                        @extend %body-font
+                        @extend %semi-bold
+                        +desktop-max
+                            padding-left: 0
+                            padding-right: 0
+                        +desktop-mini
+                            padding: 14px .5rem
+                            line-height: 1.5
+                            height: 100%
+                            +align-items(center)
+                        +laptop
+                            padding: 14px .9375rem
+                        .arrow-down
+                            margin-left: 4px
+                            @extend .item-center
+                            +desktop-max
+                                min-width: 16px
+                            &:after
+                                top: 40%
+                                +desktop-max
+                                    +transform(rotate(140deg))
+                                +desktop-mini
+                                    top: -2px
+                                    left: 3.5px
+                                    +angle(down, 4.5px, 4.5px, 1px, $text-600)
+                                +fullhd
+                                    left: 5px
+                                    +angle(down, 5.4px, 5.4px, 1px, $text-600)
+                        &[aria-expanded="true"]
+                            .arrow-down
+                                &:after
+                                    +desktop-max
+                                        +transform(rotate(225deg))
+                .list-inline
+                    margin-top: 12px
+                    @extend %display-flex
+                    padding-left: 0
+                    +mobile-sm
+                        margin-bottom: .75rem
+                    +desktop-mini
+                        margin: 0
+                    +desktop-max
+                        +justify-content(space-between)
+                    +mobile-sm-max
+                        +flex-direction(column)
+                    &-item
+                        @extend .item-center
+                        width: 100%
+                        @extend %medium
+                        &:not(:last-child)
+                            margin-bottom: 12px
+                            +mobile-sm
+                                margin-bottom: 0
+                        +mobile-sm
+                            margin-bottom: 0
+                            width: 48%
+                        +desktop-mini
+                            width: auto
+                        &:not(:last-child)
+                            margin-right: 0
+                        .btn
+                            min-height: 2.75rem
+                            padding: 12px 19px
+                            @extend %w-100
+                            +box-shadow(none)
+                            +desktop-mini
+                                min-width: 8rem
+                            &-link
+                                color: $text-600
+                                @extend %body-font
+                                @extend %semi-bold
+                                font-size: .9375rem
+                                border: 1px solid $primary-color
+                                min-width: 6.2rem
+                                padding: 0 0.3125rem
+                                &:hover
+                                    text-decoration: none
+                                    color: $primary-600
+                                +desktop-mini
+                                    border: none
+                                    line-height: 1.5
+
+
+.theme-wrapper
+    &.hover
+        &::after
+            @extend .overlay
+            z-index: 5
+            background-color: rgba($black-color , 0.5)

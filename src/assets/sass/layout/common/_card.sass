@@ -1,0 +1,29 @@
+//Modification for card layout throughout the site
+.card
+    +border-radius(.75rem)
+    padding: 1rem
+    .card-indicators &
+        width: 100%
+        min-height: 9.8125rem
+    &-indicators
+        gap: 1.4375rem
+        height: 27.57%
+        +fullhd
+            height: 19%
+    &-wrapper
+        .row
+            +fullhd
+                height: 100%
+
+    &-statistics
+        +display-flex
+        +flex-direction(column)
+        +justify-content(space-between)
+        gap: 1.4375rem
+        & > div
+            height: 48%
+    &-chart
+        height: 78%
+    &-calender
+        min-height: 50%
+        @extend %relative

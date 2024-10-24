@@ -1,0 +1,33 @@
+.case
+    padding-top: 60px
+    &-item
+        padding: 40px 0
+        +laptop
+            padding: 60px 0
+        &__info
+            +desktop-max
+                padding-top: 20px
+            h5
+                margin: 15px 0 20px
+                line-height: 1.5
+                // font-family: Heebo
+                color: $primary-900
+                max-width: 516px
+                a
+                    color: $primary-900 !important
+            p
+                margin-bottom: 30px
+                line-height: 1.5
+        &:nth-of-type(odd)
+            .case-item__info
+                +fullhd
+                    margin-left: -16px
+            .case-item__img img
+                border-radius: 20px 0 0 20px
+        &:nth-of-type(even)
+            .case-item__img
+                text-align: right
+                img
+                    border-radius: 0 20px 20px 0
+    &-loadmore
+        padding-top: 60px

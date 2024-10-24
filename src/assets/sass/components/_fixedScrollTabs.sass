@@ -1,0 +1,182 @@
+.modal-cookie
+    .scrollFixedTabsTitle
+        padding-top: 140px
+        +mobile-sm
+            padding-top: 125px
+        +fullhd
+            padding-top: 196px  
+.scrollFixedTabsTitle
+    padding-top: 70px 
+    padding-bottom: 0px 
+    +tablet
+        padding-top: 90px 
+        padding-bottom: 0px 
+    +laptop
+        padding-top: 160px 
+        padding-bottom: 17px 
+    &__text
+        padding-left: 15px
+        +desktop-mini
+            padding-left: 69px
+        +fullhd
+            padding-left: 89px
+        h1   
+            line-height: 30px
+            +desktop-mini
+                line-height: 48px  
+        p
+            line-height: 16px
+            color: #4D5976
+            span
+                color: #80889D
+
+.scrollFixedTabs 
+    padding-top: 17px
+    padding-bottom: 50px
+    +tablet
+        padding-bottom: 70px
+    +desktop-mini
+        padding-bottom: 80px
+    +fullhd
+        padding-bottom: 160px
+    &__off-canvas 
+        height: 100vh
+        position: fixed
+        background-color: #FF4C0C
+        box-shadow: rgba(0, 0, 0, 0.21) 5px 5px 25px
+        width: 0
+        z-index: 999
+        top: 0
+        left: 0
+        overflow-x: hidden
+        transition: 0.3s
+        padding-top: 60px
+        .nav
+            .nav-link
+                padding: 15px 10px 15px 20px
+                text-decoration: none
+                display: block
+                transition: 0.3s
+                white-space: normal !important
+            
+                .active 
+                    background-color: #ffffff !important
+                    color: $primary-color !important
+                    font-weight: 500 !important
+                        
+        .closebtn 
+            color: #fff
+            position: absolute
+            top: 0
+            right: 25px
+            font-size: 36px
+            margin-left: 50px
+        
+    &__content
+        .navbar-scroll 
+            max-height: 80vh
+            overflow-y: auto
+            overflow-x: hidden
+        .scrollFixedTabs__sidebar
+            padding-right: 26px 
+        .scrollFixedTabs__pageSide
+            padding-left: 15px
+            +desktop-mini
+                padding-left: 69px
+            +fullhd
+                padding-left: 89px
+                        
+        .sticky
+            position: sticky
+            top: 80px
+            +fullhd
+                top: 120px
+        .nav 
+            a
+                color: #80889D
+                font-weight: 600
+                line-height: 28px
+                padding: 12px 12px 12px 30px  
+                cursor: pointer
+                white-space: normal !important
+            a.active 
+                color: #FF4C0C !important
+                background-color: #FFEEE7
+                border-radius: 10px
+                padding: 15px 12px 15px 30px
+            a:hover
+                color: #FF4C0C !important 
+                    
+        .scrollFixedTabs__pages
+            width: 100%
+            +laptop
+                width: 97%
+            +fullhd
+                width: 77%
+            p
+                line-height: 28px
+                margin-bottom: 28px
+            ol
+                li
+                    font-size: 16px
+                    line-height: 24px
+                    margin-bottom: 20px
+                    display: flex
+                    align-items: center
+                    svg
+                        margin-right: 5px
+
+            ul
+                list-style-type: none
+                li
+                    line-height: 28px
+                    margin-bottom: 24px
+                    font-weight: 500
+
+            ul.smallText
+                margin-left: 0px !important
+                li
+                    font-size: 14px !important
+                    line-height: 20px !important
+                    margin-bottom: 20px !important
+                    font-weight: 500 !important
+            .pb-40px
+                padding-bottom: 20px
+                +fullhd
+                    padding-bottom: 40px
+
+            .iphone_title
+                .d-flex
+                    margin-bottom: 40px
+                li
+                    font-size: 14px
+                img
+                    width: 80px
+                    height: auto
+                p
+                    margin: auto 0
+                    span
+                        font-weight: 600
+            .android_title
+                .d-flex
+                    margin-bottom: 40px
+                li
+                    font-size: 14px
+                img
+                    width: 80px
+                    height: auto
+                p
+                    margin: auto 0
+                    span
+                        font-weight: 600
+
+
+.simplebar
+    &-scrollbar 
+        &:before 
+            background: $text-200
+    &-track 
+        &.simplebar-vertical    
+            width: 9px
+
+    

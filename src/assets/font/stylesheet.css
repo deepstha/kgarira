@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Lufga';
+    src: url('Lufga-Medium.eot');
+    src: url('Lufga-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Lufga-Medium.woff2') format('woff2'),
+        url('Lufga-Medium.woff') format('woff'),
+        url('Lufga-Medium.ttf') format('truetype'),
+        url('Lufga-Medium.svg#Lufga-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lufga';
+    src: url('Lufga-SemiBold.eot');
+    src: url('Lufga-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Lufga-SemiBold.woff2') format('woff2'),
+        url('Lufga-SemiBold.woff') format('woff'),
+        url('Lufga-SemiBold.ttf') format('truetype'),
+        url('Lufga-SemiBold.svg#Lufga-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

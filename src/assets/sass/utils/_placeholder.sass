@@ -1,0 +1,67 @@
+//font-weight 
+%bolder
+    font-weight: 800
+%bold
+    font-weight: 700
+%semi-bold
+    font-weight: 600
+%medium
+    font-weight: 500
+%regular
+    font-weight: 400
+%light
+    font-weight: 300
+%body-font
+    font-family: 'Lufga', sans-serif
+%uppercase
+    text-transform: uppercase
+%capitalise
+    text-transform: capitalize
+%w-100
+    width: 100%
+%h-100
+    height: 100%
+%overflow
+    overflow: hidden
+    &-x
+        overflow-x: hidden
+    &-y
+        overflow-y: hidden
+
+%relative
+    position: relative
+
+%absolute 
+    position: absolute
+    
+%content 
+    content: ""
+%size10
+    width: 8px
+    height: 8px
+    +fullhd
+        width: 10px
+        height: 10px
+
+
+%default-paragraph  
+    line-height: 26px
+    margin-bottom: 16px
+
+%display-flex 
+    +display-flex
+
+%cursor-inherit
+    cursor: inherit
+
+%transform-center
+    top: 50%
+    left: 50%
+    +transform(translate(-50%,-50%))
+
+%lg-textClip
+    -webkit-background-clip: text !important
+    -webkit-text-fill-color: transparent
+
+%lg-red
+    +gradient(104.74deg, #DA4453 8.44%, #89216B 101.11%)

@@ -1,0 +1,122 @@
+
+// Flexbox display
+.display-flex 
+    +display-flex
+
+// Inline flex display
+.display-inline-flex 
+    +display-inline-flex
+
+
+
+// sticky element
+.sticky
+    position: -webkit-sticky !important
+    position: -moz-sticky !important
+    position: -ms-sticky !important
+    position: -o-sticky !important
+    position: sticky !important
+    top: 80px
+    &-btm
+        position: fixed
+        bottom: 5px
+        top: auto !important
+
+
+// transition-slow
+.transition-slow
+    -webkit-transition: all 0.5s linear
+    -moz-transition: all 0.5s linear
+    -ms-transition: all 0.5s linear
+    -o-transition: all 0.5s linear
+    transition: all 0.5s linear
+
+//rotate
+.rotate
+    &45
+        +transform(rotate(45deg))
+
+//flex-wrap
+.flex-wrap
+    @extend %display-flex
+    +flex-wrap(wrap)
+
+.masonry 
+    display: block
+    &__item
+        &:not(:last-of-type)
+            +mobile-sm-max
+                margin-bottom: 30px
+    +mobile-sm
+        display: grid
+        grid-auto-rows: 1px
+        grid-template-columns: repeat(auto-fill, minmax(338px,1fr))
+        grid-gap: 30px
+    +tablet
+        grid-gap: 47px
+    & > 
+        *
+            +border-radius(.625rem)
+
+
+
+// center item
+.item-center
+    +display-inline-flex
+    +justify-content(center)
+    +align-items(center)
+    &-left
+        +display-inline-flex
+        +justify-content(center)
+        +align-items(start)
+        
+//box shadow
+.box
+    &-shadow
+        // +box-shadow(0 0 20px rgba($white-color, 0.06) !important) 
+
+
+//overflow
+.overflow
+    @extend %overflow
+    &-x
+      @extend %overflow-x
+    &-y
+      @extend %overflow-y
+
+//overlay
+.overlay
+    @extend .block-absolute
+    @extend %content
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    
+.absolute-center
+    @extend %absolute
+    top: 50%
+    left: 50%
+    +transform(translate(-50%,-50%))
+
+
+//cards layout
+.cards
+    min-width: 336px
+    min-height: 224px
+    font-size: 14px
+    background-color: $white-color
+    @extend %relative
+    padding: 38px
+    +border-radius(30px) 
+    +fullhd
+        min-width: 370px
+        min-height: 240px
+        padding: 40px
+    .bg-dark &
+        [class*="text-"], p
+            // color: $text-700
+
+.color-black-faded
+    color: rgba($black-color, 0.5)
+

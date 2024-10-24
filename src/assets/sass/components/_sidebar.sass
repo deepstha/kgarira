@@ -1,0 +1,55 @@
+.sidebar,.blog-off-canvas 
+    max-height: 100vh
+    +desktop
+        max-height: 80vh
+    h6 
+        color: $text-900
+    .lwptoc
+        &:first-child
+            margin-top: 5px
+        &_header
+            // display: none
+        &-light
+            .lwptoc_i
+                +tablet-max
+                    color: white
+                padding: 0
+                background-color: transparent
+                .lwptoc_item
+                    &.active
+                        & >
+                            a
+                                background: $primary-100 
+                                color: $primary-color !important
+                    a
+                        padding: .625rem 1.75rem
+                    & > a
+                        @extend .text-12
+                        color: $gray-700
+                        display: block
+                        line-height: 1.3125rem
+
+
+                    & > .lwptoc_itemWrap
+                        a
+                            @extend .text-13
+                            line-height: 1.2188rem
+                            color: $text-default
+                    &_number
+                        display: none
+                div 
+                    a 
+                        +border-radius(8px)
+                        &:hover, &.active
+                            border-bottom: none !important 
+                            background: $primary-100 
+                            color: $primary-color !important
+
+.blog-off-canvas 
+    .lwptoc
+        &-light
+            .lwptoc_i
+                .lwptoc_item
+                    & > a,& > .lwptoc_itemWrap a
+                        color: $white-color
+        

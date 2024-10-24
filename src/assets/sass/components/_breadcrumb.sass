@@ -1,0 +1,35 @@
+.breadcrumb
+    background-color: transparent
+    font-family: Manrope
+    display: inline-block
+    @extend %regular
+    margin-bottom: 1.375rem
+    .theme-light &
+        margin-bottom: .5rem
+    &-item
+        display: inline
+        color: $text-200
+        a
+            color: $text-400
+            &:hover
+                color: $white-color
+                .theme-light &
+                    color: $text-500
+        &.active
+            a
+                color: $primary-color
+        & +.breadcrumb-item:before
+            content: "/"
+            background-repeat: no-repeat
+            background-position: 50%
+            display: inherit
+            float: none
+        .post-categories
+            padding-left: 0
+            display: inline-block
+        
+        &:last-child
+            .theme-light &
+                a
+                    color: $primary-color
+            

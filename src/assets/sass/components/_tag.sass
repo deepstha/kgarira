@@ -1,0 +1,25 @@
+.tag
+    font-size: 0.88rem
+    line-height: 0.88rem
+    background-color: $primary-100
+    color: $primary-color
+    padding: 8px 12px
+    text-align: center
+    @extend .border-r-20
+    @extend %capitalise
+    @extend %body-font
+    +display-inline-flex
+    +align-items(center)
+    +justify-content(center)
+    min-width: 4.9375rem
+    &:hover
+        cursor: pointer
+    &--primary
+        background-color: $info-default
+        color: $white-color
+
+    &-count
+        background-color: #EDFDF1
+        padding: .375rem .25rem
+        color: #0A4818 
+        font-size: .8125rem

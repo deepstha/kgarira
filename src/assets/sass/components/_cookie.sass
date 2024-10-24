@@ -1,0 +1,64 @@
+.cookies
+    padding: 18px 32px
+    +box-shadow(0px 15px 99px rgba(0, 0, 0, 0.1))
+    +border-radius(10px)
+    width: 100%
+    background-color: $white-color
+    position: fixed
+    bottom: 5%
+    left: 50%
+    +transform(translateX(-50%))
+    +transition(opacity .3s ease)
+    z-index: 5
+    +mobile
+        bottom: 8%
+        left: 0
+        +transform(none)
+        width: calc(100vw - 15%)
+        margin: 0 7.5%
+        padding: 25px 30px
+    +tablet
+        width: 40.625rem
+        max-height: 5.125rem
+    &.hidden
+        opacity: 0
+        display: none
+    &__wrap
+        @extend %display-flex
+        +tablet-sm
+            +justify-content(space-between)
+            +align-items(center)
+        +tablet-sm-max
+            +flex-direction(column)
+    &__text-wrap
+        @extend %display-flex
+        +align-items(center)
+        figure
+            min-width: 2.75rem
+        h6
+            @extend .text-11
+            @extend %medium
+            margin: 0 0 0 12px
+    &__btn-wrap
+        @extend %display-flex
+        +justify-content(flex-start)
+        +mobile-sm-max
+            margin-top: 20px
+        +tablet-sm-max
+            padding-left: 30px
+            margin-top: .9375rem
+        .btn
+            @extend .text-11
+            line-height: 1
+            padding: 9px 18px 
+            height: 2.25rem
+            min-width: 5.5rem
+            +mobile-sm-max
+                width: 48%
+                min-width: 48%
+            &:last-of-type
+                padding: 9px 0
+                color: $primary-color
+            & + .btn
+                margin-left: 10px
+                margin-top: 0
